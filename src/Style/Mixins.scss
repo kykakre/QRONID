@@ -1,0 +1,71 @@
+$breakpoint-to-fluid: 992px;
+$breakpoint-to-sm: 720px;
+$base-vw: 1920px;
+
+$breakpoint-lg: 992px;
+$breakpoint-md: 768px;
+$breakpoint-sm: 576px;
+
+$container-lg: 1430px;
+$container-md: 720px;
+$container-sm: 540px;
+
+$p: 15px;
+
+@mixin container {
+  width: 100%;
+  max-width: $container-lg;
+  padding-left: $p;
+  padding-right: $p;
+  margin: auto;
+
+  @media screen and (max-width: $breakpoint-lg) {
+    max-width: $container-md;
+  }
+
+  @media screen and (max-width: $breakpoint-md) {
+    max-width: $container-sm;
+  }
+
+  @media screen and (max-width: $breakpoint-sm) {
+    max-width: none;
+  }
+}
+
+@function strip-unit($number) {
+  @if type-of($number) == "number" and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+  @return $number;
+}
+
+@function calcFluidFontSize($f-min, $f-max, $w-min, $w-max, $units: px) {
+  $f-min: strip-unit($f-min);
+  $f-max: strip-unit($f-max);
+  $w-min: strip-unit($w-min);
+  $w-max: strip-unit($w-max);
+  $k: ($f-max - $f-min)/ ($w-max - $w-min);
+  $b: $f-min - $k * $w-min;
+  $b: $b + $units;
+  @return calc(#{$k} * 100vw + #{$b});
+}
+
+@mixin fluid(
+  $property,
+  $f-min,
+  $f-max,
+  $w-min: $breakpoint-to-fluid,
+  $w-max: $base-vw,
+  $fallback: false
+) {
+  #{$property}: $f-min;
+  @media (min-width: $w-min) {
+    @if ($fallback) {
+      #{$property}: $fallback;
+    }
+    #{$property}: calcFluidFontSize($f-min, $f-max, $w-min, $w-max, px);
+  }
+  @media (min-width: $w-max) {
+    #{$property}: $f-max;
+  }
+}

@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@300;400;500;600&display=swap");
+@import "./Mixins.scss";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: #000000;
+}
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+body {
+  font-family: "Commissioner";
+  font-weight: 400;
+  @include fluid(font-size, 12px, 14px);
+  font-style: normal;
+  line-height: normal;
+  background: #fff;
+  position: relative;
+  color: #333333;
+}
+body,
+html {
+  overflow-x: hidden;
+}
+input {
+  outline: none;
+}
+.App {
+  @include container();
+  @include fluid(padding-top, 25px, 50px);
+  display: flex;
+  justify-content: space-between;
+}
+.NavItem {
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 2px;
+  opacity: 0.5;
+  position: relative;
+  z-index: 2;
+  &:before {
+    content: "";
+    left: 0;
+    top: 0;
+    z-index: -1;
+    position: absolute;
+    box-shadow: inset 0px 0px 19px 4px rgba(203, 203, 203, 0.35);
+    background: rgba(230, 230, 230, 0.19);
+    border-radius: 7px;
+    height: 100%;
+    width: 0%;
+    transition: 0.38s ease-in-out;
+  }
+  &:hover {
+    &:before {
+      width: 100%;
+    }
+  }
+}
+.NavItemActive {
+  box-shadow: inset 0px 0px 19px 4px rgba(203, 203, 203, 0.35);
+  background: rgba(230, 230, 230, 0.19);
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 2px;
+  opacity: 1;
+}
+.content {
+  width: 80%;
+  box-shadow: inset 0px 0px 19px 4px rgba(203, 203, 203, 0.35);
+  border-radius: 25px;
+  background: rgba(230, 230, 230, 0.19);
+  @include fluid(padding-top, 15px, 25px);
+  @include fluid(padding-bottom, 15px, 25px);
+  @include fluid(padding-left, 25px, 50px);
+  @include fluid(padding-right, 25px, 50px);
+}
+.card {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 20px;
+  @include fluid(margin-top, 15px, 25px);
+  @include fluid(padding-top, 20px, 40px);
+  @include fluid(padding-left, 25px, 50px);
+  @include fluid(padding-right, 25px, 50px);
+  @include fluid(padding-bottom, 20px, 40px);
+}
+.Link {
+  background: linear-gradient(242.41deg, #00e7ff 3.15%, #01a2fa 98.51%);
+  box-shadow: 0px 3px 4px 1px rgba(137, 137, 137, 0.5);
+  border-radius: 12px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  padding-left: 18px;
+  width: 100%;
+  margin-bottom: 10px;
+}

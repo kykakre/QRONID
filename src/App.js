@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Sidebar from "./Components/Sidebar/Sidebar";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import AccountPageContainer from "./Views/AccountPageContainer";
+import PayPage from "./Views/PayPage";
+import SupportPage from "./Views/SupportPage";
+import "./Style/Style.scss";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <div className="sidebar">
+          <Sidebar />
+        </div>
+        <div className="content">
+          <Routes>
+            <Route path="" element={<AccountPageContainer />} />
+            <Route path="pay" element={<PayPage />} />
+            <Route path="support" element={<SupportPage />} />
+          </Routes>
+        </div>
+      </div>
+    </BrowserRouter>
   );
 }
 
