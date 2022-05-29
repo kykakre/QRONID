@@ -28,11 +28,13 @@ export default function Account(props) {
     transform: rotate(180deg);
   `;
   return (
-    <Flex>
-      <Avatar src={props.person.avatar} />
-      <Text>{props.person.name}</Text>
-      <Text>{props.person.family}</Text>
-      <Arrow src={arrow} />
-    </Flex>
+    <div>
+      <Flex>
+        <Avatar src={props.person.avatar} />
+        <Text>{props.person.name}</Text>
+        <Text>{props.person.family}</Text>
+        <Arrow src={arrow} />
+      </Flex>
+    </div>
   );
 }

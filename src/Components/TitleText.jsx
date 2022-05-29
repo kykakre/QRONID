@@ -7,9 +7,11 @@ export default function TitleText(props) {
     font-size: 20px;
     font-weight: 500;
     margin-bottom: 15px;
+    line-height: 110%;
   `;
   const Text = styled.div`
     font-size: 16px;
+    line-height: 110%;
   `;
   const Item = styled.div`
     width: 33%;

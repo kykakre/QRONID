@@ -7,7 +7,7 @@ import CardEntry from "../Components/CardEntry/CardEntry";
 
 export default function AccountPage(props) {
   return (
-    <div>
+    <div className="content">
       <AccountConteiner person={props.person} />
       <AccourdCard card={props.card} person={props.person} />
       <CardPay />

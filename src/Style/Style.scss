@@ -90,6 +90,16 @@ input {
   @include fluid(padding-left, 25px, 50px);
   @include fluid(padding-right, 25px, 50px);
 }
+.content-min {
+  width: 700px;
+  box-shadow: inset 0px 0px 19px 4px rgba(203, 203, 203, 0.35);
+  border-radius: 25px;
+  background: rgba(230, 230, 230, 0.19);
+  @include fluid(padding-top, 15px, 25px);
+  @include fluid(padding-bottom, 15px, 25px);
+  @include fluid(padding-left, 25px, 50px);
+  @include fluid(padding-right, 25px, 50px);
+}
 .card {
   width: 100%;
   background: #ffffff;
@@ -98,6 +108,16 @@ input {
   @include fluid(padding-top, 20px, 40px);
   @include fluid(padding-left, 25px, 50px);
   @include fluid(padding-right, 25px, 50px);
+  @include fluid(padding-bottom, 20px, 40px);
+}
+.card-min {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 20px;
+  @include fluid(margin-top, 15px, 25px);
+  @include fluid(padding-top, 20px, 40px);
+  @include fluid(padding-left, 10px, 20px);
+  @include fluid(padding-right, 10px, 20px);
   @include fluid(padding-bottom, 20px, 40px);
 }
 .Link {
@@ -113,4 +133,64 @@ input {
 .linkBlue {
   font-size: 16px;
   color: #01a2fa;
+}
+.tab {
+  list-style: none;
+  border-radius: 30px;
+  position: relative;
+  cursor: pointer;
+  color: #cbcbcb;
+  z-index: 3;
+  outline: none;
+  @include fluid(padding-left, 15px, 30px);
+  @include fluid(padding-right, 15px, 30px);
+  @include fluid(padding-top, 3px, 5px);
+  @include fluid(padding-bottom, 3px, 5px);
+  overflow: hidden;
+  transition: 0.38s ease-in-out;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    transition: 0.38s linear;
+    height: 100%;
+    width: 0;
+    opacity: 0;
+    z-index: -1;
+    background: linear-gradient(242.41deg, #00e7ff 3.15%, #01a2fa 98.51%);
+  }
+  div {
+    @include fluid(font-size, 10px, 12px);
+    color: #fff;
+    transition: 0.38s ease-in-out;
+    position: relative;
+    z-index: 1;
+  }
+}
+.list {
+  margin-top: 25px;
+  display: flex;
+  border: 1px solid #cbcbcb;
+  width: fit-content;
+  border-radius: 1000px;
+  @include fluid(padding-left, 15px, 25px);
+  @include fluid(padding-right, 15px, 25px);
+  @include fluid(padding-top, 5px, 7px);
+  @include fluid(padding-bottom, 5px, 7px);
+}
+.activeTab {
+  &::before {
+    opacity: 1;
+    width: 100%;
+  }
+
+  color: #ffffff;
+}
+.tabs {
+  border-radius: 15px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
