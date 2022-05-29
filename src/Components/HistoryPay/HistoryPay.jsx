@@ -6,6 +6,7 @@ import { TabPanel } from "react-tabs";
 import QronNull from "../QronNull/QronNull";
 import QronHistory from "../QronHistory/QronHistory";
 import CheckNull from "../CheckNull/CheckNull";
+import Faq from "../Faq/Faq";
 
 export default function HistoryPay(props) {
   return (

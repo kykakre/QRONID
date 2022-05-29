@@ -6,6 +6,7 @@ let mapStateToProps = (state) => {
     person: state.accountPage.personInfo,
     pay: state.payPage.historyInfo,
     check: state.payPage.checkInfo,
+    faq: state.payPage.faqInfo,
   };
 };
 

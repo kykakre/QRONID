@@ -194,3 +194,73 @@ input {
   display: flex;
   flex-direction: column;
 }
+.accordeon {
+  transition: 0.38s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  @include fluid(padding-top, 15px, 20px);
+  border-bottom: 1px solid #cbcbcb;
+}
+.accordeonOpen {
+  backdrop-filter: blur(100px);
+
+  @include fluid(padding-bottom, 15px, 25px);
+}
+
+.dropdown {
+  background: url("../Img/icon/arrow.svg") no-repeat;
+  transform: rotate(180deg);
+  background-size: contain;
+  @include fluid(width, 12px, 15px);
+  @include fluid(height, 6px, 8px);
+  transition: 0.38s ease-in-out;
+  transform-origin: center;
+}
+.dropdownOpen {
+  transform: rotate(0deg);
+}
+.contentAccordeon {
+  color: #fff;
+  max-height: 0;
+  opacity: 0;
+  transition: 0.4s linear;
+  animation: close 1.5s;
+}
+.contentAccordeonOpen {
+  animation: open 1s;
+  transition: 0.4s linear;
+  opacity: 1;
+  max-height: 100%;
+  @include fluid(margin-bottom, 15px, 35px);
+  @include fluid(margin-top, 10px, 25px);
+}
+.titleAccordeon {
+  @include fluid(font-size, 14px, 16px);
+}
+.blockAccordeon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  @include fluid(margin-bottom, 10px, 20px);
+}
+.accordion-wrapper__content-enter {
+  overflow: hidden;
+  max-height: 0;
+}
+
+.accordion-wrapper__content-enter-active {
+  max-height: 1000px;
+  transition: max-height 0.6s ease-in-out;
+}
+
+.accordion-wrapper__content-exit {
+  max-height: 1000px;
+}
+
+.accordion-wrapper__content-exit-active {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s cubic-bezier(0, 1, 0, 1);
+}
