@@ -2,7 +2,7 @@ import Sidebar from "./Components/Sidebar/Sidebar";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import AccountPageContainer from "./Views/AccountPageContainer";
 import PayPageContainer from "./Views/PayPageContainer";
-import SupportPage from "./Views/SupportPage";
+import SupportPageContainer from "./Views/SupportPageContainer";
 import "./Style/Style.scss";
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
         <Routes>
           <Route path="" element={<AccountPageContainer />} />
           <Route path="pay" element={<PayPageContainer />} />
-          <Route path="support" element={<SupportPage />} />
+          <Route path="support" element={<SupportPageContainer />} />
         </Routes>
       </div>
     </BrowserRouter>

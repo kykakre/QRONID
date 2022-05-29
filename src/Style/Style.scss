@@ -264,3 +264,22 @@ input {
   max-height: 0;
   transition: max-height 0.4s cubic-bezier(0, 1, 0, 1);
 }
+.form {
+  width: 100%;
+}
+.submit {
+  background: #01a2fa;
+  border-radius: 7px;
+  color: #fff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 70px;
+  padding-right: 70px;
+  border: 1px solid #01a2fa;
+  transition: 0.38s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    background: #fff;
+    color: #01a2fa;
+  }
+}
