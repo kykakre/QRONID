@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import arrow from "../../Img/icon/arrow.svg";
 
 export default function Account(props) {
   const Avatar = styled.img`
@@ -19,11 +20,19 @@ export default function Account(props) {
     align-items: center;
     justify-content: flex-end;
   `;
+  const Arrow = styled.img`
+    width: 10px;
+    height: 5px;
+    object-fit: contain;
+    margin-left: 10px;
+    transform: rotate(180deg);
+  `;
   return (
     <Flex>
       <Avatar src={props.person.avatar} />
       <Text>{props.person.name}</Text>
       <Text>{props.person.family}</Text>
+      <Arrow src={arrow} />
     </Flex>
   );
 }
