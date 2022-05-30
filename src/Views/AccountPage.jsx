@@ -5,8 +5,8 @@ import CardPay from "../Components/CardPay/CardPay";
 import CardMail from "../Components/CardMail.jsx/CardMail";
 import CardEntry from "../Components/CardEntry/CardEntry";
 import { Navigate } from "react-router";
+
 export default function AccountPage(props) {
-  debugger;
   return (
     <div className="content">
       <AccountConteiner person={props.person} />
