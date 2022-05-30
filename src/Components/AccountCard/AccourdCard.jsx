@@ -84,7 +84,7 @@ export default function AccourdCard(props) {
               Имя в комментариях и отзывах: <span>Иван Иванов</span>
             </Text>
             <Text>
-              Публичный адрес: <Span>Не выбран</Span>{" "}
+              Публичный адрес: <Span>Не выбран</Span>
             </Text>
           </FlexCenter>
         </ColumnMin>

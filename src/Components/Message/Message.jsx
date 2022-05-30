@@ -45,7 +45,7 @@ export default function Message(props) {
       </Title>
       <Item>
         <Text>Ваше сообщение:</Text>
-        <TextArea placeholder="Напишите сообщение..." wrap></TextArea>
+        <TextArea placeholder="Напишите сообщение..." wrap="true"></TextArea>
       </Item>
       <input className="submit" type="submit"></input>
     </Column>

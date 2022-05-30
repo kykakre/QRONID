@@ -7,6 +7,7 @@ export default function QronHistory(props) {
   let Item = props.pay.map((e) => (
     <QronHistoryItem
       id={e.id}
+      key={e.id}
       icon={e.icon}
       type={e.type}
       name={e.name}
