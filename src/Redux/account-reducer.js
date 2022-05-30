@@ -43,6 +43,7 @@ let initialState = {
       bank: bankIcon,
     },
   ],
+  isLogin: false,
 };
 
 const accountReducer = (state = initialState, action) => {

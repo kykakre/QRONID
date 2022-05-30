@@ -5,6 +5,7 @@ let mapStateToProps = (state) => {
   return {
     person: state.accountPage.personInfo,
     card: state.accountPage.cardItems,
+    isLogin: state.accountPage,
   };
 };
 

@@ -1,10 +1,13 @@
 import Sidebar from "./Components/Sidebar/Sidebar";
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
 import AccountPageContainer from "./Views/AccountPageContainer";
 import PayPageContainer from "./Views/PayPageContainer";
 import SupportPageContainer from "./Views/SupportPageContainer";
 import "./Style/Style.scss";
-function App() {
+import Login from "./Components/Login/Login";
+function App(props) {
+  if (props.isLogin === false)
+    return <Navigate path="login" element={<Login />} />;
   return (
     <BrowserRouter>
       <div className="App">
