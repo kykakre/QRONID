@@ -1,11 +1,11 @@
-<svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="45" height="46" viewBox="0 0 45 46" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g filter="url(#filter0_i_0_17)">
-<path d="M22.5 45C34.9264 45 45 34.9264 45 22.5C45 10.0736 34.9264 0 22.5 0C10.0736 0 0 10.0736 0 22.5C0 34.9264 10.0736 45 22.5 45Z" fill="#E6E6E6" fill-opacity="0.19"/>
+<path d="M22.3977 45.6296C34.7239 45.6296 44.7163 35.6372 44.7163 23.311C44.7163 10.9848 34.7239 0.992432 22.3977 0.992432C10.0715 0.992432 0.0791016 10.9848 0.0791016 23.311C0.0791016 35.6372 10.0715 45.6296 22.3977 45.6296Z" fill="#E6E6E6" fill-opacity="0.19"/>
 </g>
-<rect x="15.4966" y="9" width="13.0182" height="12.47" fill="url(#pattern0)"/>
-<rect x="10" y="23.2054" width="24" height="11.7946" fill="url(#pattern1)"/>
+<rect x="16.0908" y="10.0452" width="12.6249" height="12.7251" fill="url(#pattern0)"/>
+<rect x="10.7603" y="24.5411" width="23.2747" height="12.0358" fill="url(#pattern1)"/>
 <defs>
-<filter id="filter0_i_0_17" x="0" y="0" width="45" height="45" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_i_0_17" x="0.0791016" y="0.992432" width="44.6372" height="44.6372" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>

@@ -4,9 +4,10 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import vk from "../../Img/icon/vk.svg";
 import google from "../../Img/icon/google.svg";
-export default function Login() {
+
+export default function LoginAccept() {
   const Autorize = styled.div`
-    min-width: 400px;
+    min-width: 550px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -120,27 +121,14 @@ export default function Login() {
   return (
     <Autorize>
       <Logo src={icon} />
-      <Title>Войти с QRON ID</Title>
+      <Title>Безопастый вход</Title>
       <Form>
-        <FormTitle>Введите ваш ID</FormTitle>
-        <Input placeholder="Телефон или почта" />
-        <NavLink to="#">
-          <Nav>Не помню</Nav>
-        </NavLink>
-        <Btn type="submit"></Btn>
+        <Btn type="submit" />
         <NavLink to="#">
           <Create>Создать ID</Create>
         </NavLink>
-        <AutorizeInTo>Войти с помощью</AutorizeInTo>
       </Form>
-      <Flex>
-        <NavLink to="#">
-          <LinkIkon src={vk} />
-        </NavLink>
-        <NavLink to="#">
-          <LinkIkon src={google} />
-        </NavLink>
-      </Flex>
+
       <Footer>
         <FooterTitle>QRON ID</FooterTitle>
         <FooterText>ключ для любого платежа</FooterText>

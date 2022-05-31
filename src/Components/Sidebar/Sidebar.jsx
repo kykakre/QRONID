@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import logo from "../../Img/logo.svg";
+import logo from "../../Img/logo.png";
 import account from "../../Img/icon/account.svg";
 import card from "../../Img/icon/card.svg";
 import message from "../../Img/icon/message.svg";
@@ -13,7 +13,7 @@ export default function Sidebar(props) {
     width: 100%;
   `;
   const Logo = styled.img`
-    width: 145px;
+    width: 143px;
     height: 35px;
     object-fit: contain;
     margin-bottom: 40px;
