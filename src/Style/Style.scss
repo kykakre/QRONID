@@ -33,7 +33,8 @@ input {
   outline: none;
 }
 .App {
-  @include container();
+  @include fluid(padding-left, 50px, 100px);
+  @include fluid(padding-right, 50px, 100px);
   @include fluid(padding-top, 25px, 50px);
   display: flex;
   justify-content: space-between;
@@ -293,7 +294,7 @@ input {
   transition: max-height 0.4s cubic-bezier(0, 1, 0, 1);
 }
 .form {
-  width: 100%;
+  width: 75%;
 }
 .submit {
   background: #01a2fa;

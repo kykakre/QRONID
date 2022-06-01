@@ -13,13 +13,24 @@ export default function ChatBody(props) {
   const Body = styled.div`
     height: 420px;
     width: 100%;
-    overflow-x: scroll;
+    overflow-y: scroll;
     padding-bottom: 40px;
     padding-left: 15px;
     padding-right: 15px;
+    justify-content: flex-end;
+
+    &::-webkit-scrollbar {
+      background: transparent;
+    }
+  `;
+  const Flex = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
   `;
-  return <Body>{item}</Body>;
+  return (
+    <Body>
+      <Flex>{item}</Flex>
+    </Body>
+  );
 }
