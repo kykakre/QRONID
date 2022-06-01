@@ -13,7 +13,7 @@ export default function Account(props) {
   const Text = styled.div`
     font-size: 12px;
     line-height: 110%;
-    margin-left: 5px;
+    margin-right: 5px;
   `;
   const Flex = styled.div`
     display: flex;
@@ -33,7 +33,6 @@ export default function Account(props) {
         <Avatar src={props.person.avatar} />
         <Text>{props.person.name}</Text>
         <Text>{props.person.family}</Text>
-        <Arrow src={arrow} />
       </Flex>
     </div>
   );

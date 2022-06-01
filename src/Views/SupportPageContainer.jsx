@@ -4,6 +4,7 @@ import SupportPage from "./SupportPage";
 let mapStateToProps = (state) => {
   return {
     person: state.accountPage.personInfo,
+    message: state.message,
   };
 };
 

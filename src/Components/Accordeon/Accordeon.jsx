@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { CSSTransition } from "react-transition-group";
 import styled from "styled-components";
+import arrow from "../../Img/icon/arrow.svg";
 
 export default function Accordeon(props) {
   const [open, setOpen] = useState(false);
@@ -12,7 +13,11 @@ export default function Accordeon(props) {
     <div className={open ? "accordeon accordeonOpen" : "accordeon"}>
       <div onClick={openedAccordeon} className="blockAccordeon">
         <div className="titleBlock">{props.title}</div>
-        <div className={open ? "dropdown dropdownOpen" : "dropdown"}></div>
+        <img
+          alt=""
+          src={arrow}
+          className={open ? "dropdown dropdownOpen" : "dropdown"}
+        />
       </div>
 
       <CSSTransition

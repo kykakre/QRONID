@@ -7,6 +7,7 @@ import LoginAccept from "./Components/Login/LoginAccept";
 import "./Style/Style.scss";
 import Login from "./Components/Login/Login";
 import { useState } from "react";
+import Chat from "./Components/Chat/Chat";
 function App(props) {
   const [login, setLogin] = useState(true);
   return (

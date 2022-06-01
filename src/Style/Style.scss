@@ -206,12 +206,19 @@ input {
   transition: 0.38s ease-in-out;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+
   height: auto;
   @include fluid(padding-top, 15px, 20px);
 }
 .cursor {
   cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
 }
+
 .accordeonOpen {
   backdrop-filter: blur(100px);
 
@@ -219,7 +226,6 @@ input {
 }
 
 .dropdown {
-  background: url("../Img/icon/arrow.svg") no-repeat;
   transform: rotate(180deg);
   background-size: contain;
   @include fluid(width, 12px, 15px);
@@ -228,6 +234,18 @@ input {
   transform-origin: center;
 }
 .dropdownOpen {
+  transform: rotate(0deg);
+}
+
+.dropdownCard {
+  transform: rotate(180deg);
+  background-size: contain;
+  @include fluid(width, 15px, 20px);
+  @include fluid(height, 7px, 10px);
+  transition: 0.38s ease-in-out;
+  transform-origin: center;
+}
+.dropdownCardOpen {
   transform: rotate(0deg);
 }
 .contentAccordeon {

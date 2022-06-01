@@ -42,7 +42,6 @@ export default function TitleCard(props) {
         <Title>{props.title}</Title>
         {props.logo ? LogoBlock : ""}
       </Flex>
-      <Arrow src={arrow} />
     </SpaceBetween>
   );
 }

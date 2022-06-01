@@ -3,6 +3,7 @@ import Account from "../Components/Account/Account";
 import styled from "styled-components";
 import Message from "../Components/Message/Message";
 import AccountAccordeon from "../Components/Account/AccountAccordeon";
+import Chat from "../Components/Chat/Chat";
 
 export default function SupportPage(props) {
   const Flex = styled.div`
@@ -13,7 +14,7 @@ export default function SupportPage(props) {
   return (
     <Flex>
       <div className="form">
-        <Message />
+        <Chat props={props.message} />
       </div>
       <AccountAccordeon person={props.person} />
     </Flex>
