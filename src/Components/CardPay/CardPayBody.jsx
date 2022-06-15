@@ -44,6 +44,9 @@ export default function CardPayBody(props) {
     &:hover {
       background-size: 150%, 100%;
     }
+    @media (max-width: 991px) {
+      width: 30%;
+    }
   `;
 
   const Icon = styled.img`
@@ -61,6 +64,9 @@ export default function CardPayBody(props) {
     color: #fff;
     font-weight: 600;
     margin-bottom: 7px;
+    @media (max-width: 1200px) {
+      font-size: 14px;
+    }
   `;
   const Text = styled.div`
     font-size: 14px;

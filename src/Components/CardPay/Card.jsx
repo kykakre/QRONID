@@ -22,7 +22,9 @@ export default function Card(props) {
     background-size: 100%, 100%;
     transition: 0.38s ease-in-out;
     margin-right: 15px;
-
+    @media (max-width: 1400px) {
+      width: 25%;
+    }
     &:hover {
       background-size: 150%, 100%;
       margin-top: -5px;
