@@ -6,6 +6,7 @@ import Card from "./Card";
 import bank from "../../Img/icon/bank.svg";
 import security from "../../Img/icon/security.svg";
 import { NavLink } from "react-router-dom";
+import Modal from "react-modal";
 export default function CardPayBody(props) {
   const Flex = styled.div`
     display: flex;
@@ -13,7 +14,42 @@ export default function CardPayBody(props) {
     flex-wrap: wrap;
     margin-bottom: 30px;
   `;
+  const ModalFlex = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  `;
+  const ModalTitle = styled.div`
+    font-size: 20px;
+    color: #000;
+    font-weight: 500;
+    margin-bottom: 25px;
+  `;
+  const ModalAdd = styled.img`
+    width: 16px;
+    height: 16px;
+    margin-right: 15px;
+  `;
+  const ModalButton = styled.div`
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 45px;
+    background: #01a2fa;
+    border-radius: 8px;
+    transition: 0.38s ease-in-out;
 
+    width: 45%;
+    a {
+      display: flex;
+      align-items: center;
+    }
+  `;
+  const ModalText = styled.div`
+    font-size: 14px;
+    color: #fff;
+  `;
   const Subtitle = styled.div`
     font-size: 16px;
     color: #333;
@@ -61,6 +97,12 @@ export default function CardPayBody(props) {
     font-size: 14px;
     color: #cbcbcb;
   `;
+  function closeModal() {
+    setIsOpen(false);
+  }
+
+  const [modalIsOpen, setIsOpen] = React.useState(false);
+
   let cardHolder = props.cardPay.map((e) => (
     <Card id={e.id} number={e.number} key={e.key} bank={e.bank} />
   ));
@@ -71,17 +113,33 @@ export default function CardPayBody(props) {
         <NavLink to="/"> Узнать больше</NavLink>
       </Subtitle>
       <Flex>
-        <NavLink className="addCard" to="/">
-          <CardAdd>
+        <div className="addCard">
+          <CardAdd onClick={() => setIsOpen(true)}>
             <Icon src={plus} />
             <Content>
               <Title>Добавить карту</Title>
               <Text>Чтобы платить в один клик</Text>
             </Content>
           </CardAdd>
-        </NavLink>
-
+        </div>
         {cardHolder}
+        <Modal
+          isOpen={modalIsOpen}
+          onRequestClose={closeModal}
+          contentLabel="Example Modal"
+          className="modal"
+        >
+          <ModalFlex>
+            <ModalTitle>Мои карты</ModalTitle>
+          </ModalFlex>
+          <ModalFlex>{cardHolder}</ModalFlex>
+          <ModalButton>
+            <NavLink to="#">
+              <ModalAdd src={plus} />
+              <ModalText>Добавить новую карту</ModalText>
+            </NavLink>
+          </ModalButton>
+        </Modal>
       </Flex>
       <Flex>
         <Security src={security} />

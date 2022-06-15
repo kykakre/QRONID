@@ -3,7 +3,7 @@ import styled from "styled-components";
 import more from "../../Img/icon/more.svg";
 
 export default function Card(props) {
-  const Card = styled.a`
+  const Card = styled.div`
     display: flex;
     background: radial-gradient(
       47.05% 119.14% at 49.88% 50.66%,
@@ -53,7 +53,7 @@ export default function Card(props) {
     margin-top: 15px;
   `;
   return (
-    <Card href="">
+    <Card>
       <ItemSecond>
         <More src={more} />
       </ItemSecond>
