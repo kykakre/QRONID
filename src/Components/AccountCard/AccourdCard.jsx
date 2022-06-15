@@ -20,18 +20,20 @@ export default function AccourdCard(props) {
     display: flex;
     align-items: center;
     width: 100%;
-    padding-top: 20px;
+    padding-top: 25px;
   `;
   const Column = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-left: 20px;
   `;
   const ColumnMin = styled.div`
-    width: 36%;
+    width: 38%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 20px;
   `;
   const Avatar = styled.img`
     width: 115px;

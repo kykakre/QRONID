@@ -14,9 +14,9 @@ export default function Sidebar(props) {
   `;
   const Logo = styled.img`
     width: 165px;
-    height: 25px;
+    height: 26px;
     object-fit: contain;
-    margin-bottom: 40px;
+    margin-bottom: 44px;
   `;
   const Nav = styled.div``;
 

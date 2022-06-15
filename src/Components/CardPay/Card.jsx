@@ -25,7 +25,7 @@ export default function Card(props) {
 
     &:hover {
       background-size: 150%, 100%;
-      margin-top: -5px;
+      transform: rotate3d(0, -1, 0, -15deg);
     }
   `;
   const Text = styled.div`

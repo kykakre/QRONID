@@ -11,7 +11,7 @@ export default function CardPayBody(props) {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   `;
 
   const Subtitle = styled.div`
@@ -27,24 +27,7 @@ export default function CardPayBody(props) {
       }
     }
   `;
-  const CardAdd = styled.div`
-    background: linear-gradient(253.3deg, #00e7ff 0%, #01a2fa 100%);
-    background-size: 100%, 100%;
-    border-radius: 18px;
-    display: flex;
-    align-items: center;
-    width: 17%;
-    padding-top: 15px;
-    padding-left: 19px;
-    padding-bottom: 14px;
-    padding-right: 28px;
-    margin-right: 20px;
-    height: 115px;
-    transition: 0.38s ease-in-out;
-    &:hover {
-      background-size: 150%, 100%;
-    }
-  `;
+  const CardAdd = styled.div``;
 
   const Icon = styled.img`
     width: 22px;
@@ -63,7 +46,7 @@ export default function CardPayBody(props) {
     margin-bottom: 7px;
   `;
   const Text = styled.div`
-    font-size: 14px;
+    font-size: 12px;
     color: #fff;
   `;
   const Security = styled.img`
@@ -88,15 +71,15 @@ export default function CardPayBody(props) {
         <NavLink to="/"> Узнать больше</NavLink>
       </Subtitle>
       <Flex>
-        <CardAdd>
-          <NavLink to="/">
+        <NavLink className="addCard" to="/">
+          <CardAdd>
             <Icon src={plus} />
             <Content>
               <Title>Добавить карту</Title>
               <Text>Чтобы платить в один клик</Text>
             </Content>
-          </NavLink>
-        </CardAdd>
+          </CardAdd>
+        </NavLink>
 
         {cardHolder}
       </Flex>
