@@ -13,11 +13,7 @@ export default function Accordeon(props) {
     <div className={open ? "accordeon accordeonOpen" : "accordeon"}>
       <div onClick={openedAccordeon} className="blockAccordeon">
         <div className="titleBlock">{props.title}</div>
-        <img
-          alt=""
-          src={arrow}
-          className={open ? "dropdown dropdownOpen" : "dropdown"}
-        />
+        <div alt="" className={open ? "dropdown dropdownOpen" : "dropdown"} />
       </div>
 
       <CSSTransition

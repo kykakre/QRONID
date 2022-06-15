@@ -14,7 +14,7 @@ export default function TitleText(props) {
     line-height: 110%;
   `;
   const Item = styled.div`
-    width: 33%;
+    width: 32%;
     line-height: 110%;
     display: flex;
     flex-direction: column;
