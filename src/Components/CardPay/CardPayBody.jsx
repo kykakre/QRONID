@@ -63,7 +63,27 @@ export default function CardPayBody(props) {
       }
     }
   `;
-  const CardAdd = styled.div``;
+  const CardAdd = styled.div`
+    background: linear-gradient(253.3deg, #00e7ff 0%, #01a2fa 100%);
+    background-size: 100%, 100%;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    width: 17%;
+    padding-top: 15px;
+    padding-left: 19px;
+    padding-bottom: 14px;
+    padding-right: 28px;
+    margin-right: 20px;
+    height: 115px;
+    transition: 0.38s ease-in-out;
+    &:hover {
+      background-size: 150%, 100%;
+    }
+    @media (max-width: 991px) {
+      width: 30%;
+    }
+  `;
 
   const Icon = styled.img`
     width: 22px;
@@ -80,6 +100,9 @@ export default function CardPayBody(props) {
     color: #fff;
     font-weight: 600;
     margin-bottom: 7px;
+    @media (max-width: 1200px) {
+      font-size: 14px;
+    }
   `;
   const Text = styled.div`
     font-size: 12px;

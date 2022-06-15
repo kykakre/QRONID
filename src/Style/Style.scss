@@ -33,11 +33,14 @@ input {
   outline: none;
 }
 .App {
-  @include fluid(padding-left, 40px, 85px);
-  @include fluid(padding-right, 40px, 85px);
-  @include fluid(padding-top, 40px, 80px);
-  display: flex;
-  justify-content: space-between;
+  @include fluid(padding-left, 15px, 100px);
+  @include fluid(padding-right, 15px, 100px);
+  @include fluid(padding-top, 25px, 50px);
+  @include fluid(padding-bottom, 25px, 50px);
+  display: grid;
+  grid-template-columns: 1fr 6fr 1fr;
+
+  @include fluid(grid-column-gap, 40px, 130px);
 }
 .NavItem {
   display: flex;
@@ -69,9 +72,6 @@ input {
     }
   }
 }
-.sidebar {
-  width: 10.6%;
-}
 .NavItemActive {
   border: 1px solid #01a2fa;
   color: #01a2fa;
@@ -91,7 +91,6 @@ input {
   }
 }
 .content {
-  width: 82%;
   @include fluid(margin-top, 25px, 50px);
 }
 .content-min {
@@ -109,10 +108,10 @@ input {
   background: #ffffff;
   border: 1px solid #cbcbcb;
   border-radius: 20px;
-  @include fluid(margin-top, 15px, 20px);
-  @include fluid(padding-top, 20px, 42px);
-  @include fluid(padding-left, 25px, 50px);
-  @include fluid(padding-right, 25px, 50px);
+  @include fluid(margin-top, 15px, 25px);
+  @include fluid(padding-top, 20px, 40px);
+  @include fluid(padding-left, 15px, 65px);
+  @include fluid(padding-right, 15px, 50px);
   @include fluid(padding-bottom, 20px, 40px);
 }
 .card-min {
@@ -401,5 +400,18 @@ input {
   &:hover {
     background: #fff;
     color: #01a2fa;
+  }
+}
+@media screen and(max-width:1400px) {
+  .App {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .sidebar {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .account {
+    grid-column: 5;
+    grid-row: 1;
   }
 }

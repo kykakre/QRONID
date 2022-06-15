@@ -8,6 +8,9 @@ export default function AccourdCard(props) {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media (max-width: 991px) {
+      flex-direction: column;
+    }
   `;
   const FlexStart = styled.div`
     display: flex;
@@ -33,7 +36,11 @@ export default function AccourdCard(props) {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 20px;
+    @media (max-width: 991px) {
+      margin-top: 50px;
+      margin-bottom: 50px;
+      width: 100%;
+    }
   `;
   const Avatar = styled.img`
     width: 115px;
