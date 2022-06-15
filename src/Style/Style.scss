@@ -42,11 +42,11 @@ input {
 .NavItem {
   display: flex;
   align-items: center;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  margin-bottom: 2px;
+  padding-left: 13px;
+  padding-right: 13px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  margin-bottom: 10px;
   opacity: 0.5;
   position: relative;
   z-index: 2;
@@ -56,8 +56,8 @@ input {
     top: 0;
     z-index: -1;
     position: absolute;
-    box-shadow: inset 0px 0px 19px 4px rgba(203, 203, 203, 0.35);
-    background: rgba(230, 230, 230, 0.19);
+    background: rgba(1, 162, 249, 0.19);
+
     border-radius: 7px;
     height: 100%;
     width: 0%;
@@ -69,27 +69,30 @@ input {
     }
   }
 }
+.sidebar {
+  width: 10.6%;
+}
 .NavItemActive {
-  box-shadow: inset 0px 0px 19px 4px rgba(203, 203, 203, 0.35);
-  background: rgba(230, 230, 230, 0.19);
+  border: 1px solid #01a2fa;
+  color: #01a2fa;
+
   border-radius: 7px;
   display: flex;
   align-items: center;
   padding-left: 12px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  margin-bottom: 2px;
+  padding-right: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
   opacity: 1;
+  img {
+    filter: brightness(0) saturate(100%) invert(49%) sepia(59%) saturate(3031%)
+      hue-rotate(172deg) brightness(98%) contrast(103%);
+  }
 }
 .content {
-  width: 80%;
-  box-shadow: inset 0px 0px 19px 4px rgba(203, 203, 203, 0.35);
-  border-radius: 25px;
-  background: rgba(230, 230, 230, 0.19);
-  @include fluid(padding-top, 15px, 25px);
-  @include fluid(padding-bottom, 15px, 25px);
-  @include fluid(padding-left, 25px, 50px);
-  @include fluid(padding-right, 25px, 50px);
+  width: 82%;
+  @include fluid(margin-top, 25px, 50px);
 }
 .content-min {
   width: 700px;
@@ -104,10 +107,11 @@ input {
 .card {
   width: 100%;
   background: #ffffff;
+  border: 1px solid #cbcbcb;
   border-radius: 20px;
   @include fluid(margin-top, 15px, 25px);
   @include fluid(padding-top, 20px, 40px);
-  @include fluid(padding-left, 25px, 50px);
+  @include fluid(padding-left, 30px, 65px);
   @include fluid(padding-right, 25px, 50px);
   @include fluid(padding-bottom, 20px, 40px);
 }
@@ -128,12 +132,43 @@ input {
   padding-top: 18px;
   padding-bottom: 18px;
   padding-left: 18px;
+  padding-right: 20px;
   width: 100%;
   margin-bottom: 10px;
+  background-size: 100%, 100%;
+  transition: 0.38s ease-in-out;
+
+  &:hover {
+    background-size: 150%, 100%;
+    margin-top: -5px;
+    margin-bottom: 15px;
+  }
 }
 .linkBlue {
   font-size: 16px;
   color: #01a2fa;
+  position: relative;
+  display: block;
+  width: fit-content;
+  &::before {
+    content: "";
+    transition: 0.38s ease-in-out;
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    background: #01a2fa;
+    width: 0;
+    height: 3px;
+    opacity: 0;
+    border-radius: 1px;
+  }
+  &:hover {
+    &::before {
+      left: 0;
+      opacity: 1;
+      width: 100%;
+    }
+  }
 }
 .tab {
   list-style: none;
@@ -218,14 +253,22 @@ input {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 25px;
-}
+  transition: 0.38s ease-in-out;
+  &:hover {
+    .dropdownCard {
+      background: url("../Img/icon/arrowBluw.svg") no-repeat;
 
+      @include fluid(width, 15px, 19px);
+      @include fluid(height, 7px, 9px);
+      background-size: contain;
+    }
+  }
+}
 .accordeonOpen {
   backdrop-filter: blur(100px);
 
   @include fluid(padding-bottom, 15px, 25px);
 }
-
 .dropdown {
   transform: rotate(180deg);
   background-size: contain;
@@ -240,14 +283,19 @@ input {
 
 .dropdownCard {
   transform: rotate(180deg);
-  background-size: contain;
-  @include fluid(width, 15px, 20px);
-  @include fluid(height, 7px, 10px);
+  @include fluid(width, 15px, 19px);
+  @include fluid(height, 7px, 9px);
   transition: 0.38s ease-in-out;
-  transform-origin: center;
+  background: url("../Img/icon/arrow.svg") no-repeat;
+  background-size: contain;
 }
 .dropdownCardOpen {
   transform: rotate(0deg);
+
+  @include fluid(width, 15px, 19px);
+  @include fluid(height, 7px, 9px);
+  background: url("../Img/icon/arrowBluw.svg") no-repeat;
+  background-size: contain;
 }
 .contentAccordeon {
   color: #fff;

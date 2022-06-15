@@ -3,7 +3,7 @@ import logo from "../Img/favicon 3.svg";
 let initialState = {
   titleChat: {
     avatar: logo,
-    status: false,
+    status: true,
     name: "Qron ID",
   },
 

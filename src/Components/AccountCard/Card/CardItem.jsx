@@ -11,21 +11,23 @@ export default function CardItem(props) {
     width: 20px;
     height: 20px;
     object-fit: contain;
-    margin-right: 15px;
+    margin-right: 18px;
   `;
   const Column = styled.div`
     display: flex;
     flex-direction: column;
   `;
   const Text = styled.div`
+    font-weight: 400;
     font-size: 14px;
+    line-height: 125%;
     color: #fff;
     margin-bottom: 5px;
     line-height: 125%;
   `;
   const Link = styled.div`
-    font-weight: 500;
-    font-size: 14px;
+    font-weight: 600;
+    font-size: 16px;
     color: #fff;
   `;
   return (

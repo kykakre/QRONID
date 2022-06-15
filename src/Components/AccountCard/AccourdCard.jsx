@@ -14,10 +14,12 @@ export default function AccourdCard(props) {
     align-items: baseline;
     padding-bottom: 30px;
     border-bottom: 1px solid #cbcbcb;
+    width: 100%;
   `;
   const FlexCenter = styled.div`
     display: flex;
     align-items: center;
+    width: 100%;
     padding-top: 20px;
   `;
   const Column = styled.div`
@@ -26,7 +28,7 @@ export default function AccourdCard(props) {
     align-items: center;
   `;
   const ColumnMin = styled.div`
-    width: 35%;
+    width: 36%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,27 +39,55 @@ export default function AccourdCard(props) {
     object-fit: contain;
   `;
   const Link = styled.div`
-    font-size: 12px;
+    font-size: 11px;
     margin-top: 10px;
     margin-bottom: 15px;
+    line-height: 110%;
+    position: relative;
+
     color: #01a2fa;
+    &::before {
+      content: "";
+      transition: 0.38s ease-in-out;
+      position: absolute;
+      left: 50%;
+      bottom: -10px;
+      background: #01a2fa;
+      width: 0;
+      height: 1.5px;
+      opacity: 0;
+      border-radius: 1px;
+    }
+    &:hover {
+      &::before {
+        left: 0;
+        opacity: 1;
+        width: 100%;
+      }
+    }
   `;
   const Name = styled.div`
     font-size: 30px;
     font-weight: 500;
+    line-height: 110%;
   `;
   const Mail = styled.div`
     margin-top: 15px;
     font-size: 16px;
   `;
   const Text = styled.div`
-    span {
+    width: 62%;
+    margin-right: 7px;
+    div {
       font-weight: 600;
     }
   `;
-  const Span = styled.span`
-    color: #cbcbcb;
-    font-weight: 600;
+  const TextMin = styled.div`
+    width: 36.5%;
+    div {
+      color: #cbcbcb;
+      font-weight: 600;
+    }
   `;
   return (
     <div className="card">
@@ -77,15 +107,15 @@ export default function AccourdCard(props) {
               Для изменения персональной информации обратитесь к администратору
               домена
             </Text>
-            <Text>Россия</Text>
+            <TextMin>Россия</TextMin>
           </FlexStart>
           <FlexCenter>
             <Text>
-              Имя в комментариях и отзывах: <span>Иван Иванов</span>
+              Имя в комментариях и отзывах: <div>Иван Иванов</div>
             </Text>
-            <Text>
-              Публичный адрес: <Span>Не выбран</Span>
-            </Text>
+            <TextMin>
+              Публичный адрес: <div>Не выбран</div>
+            </TextMin>
           </FlexCenter>
         </ColumnMin>
         <Card card={props.card} />

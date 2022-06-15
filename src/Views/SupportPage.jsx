@@ -9,14 +9,12 @@ export default function SupportPage(props) {
   const Flex = styled.div`
     display: flex;
     justify-content: space-between;
-    width: 75%;
   `;
   return (
     <Flex>
       <div className="form">
         <Chat props={props.message} />
       </div>
-      <AccountAccordeon person={props.person} />
     </Flex>
   );
 }

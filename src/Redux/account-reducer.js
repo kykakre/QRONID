@@ -1,4 +1,4 @@
-import avatar from "../Img/icon/avatar.svg";
+import avatar from "../Img/icon/avatar.png";
 import heart from "../Img/icon/heart.svg";
 import importIcon from "../Img/icon/import.svg";
 import phone from "../Img/icon/phone.svg";
@@ -39,6 +39,16 @@ let initialState = {
   CardPayInfo: [
     {
       id: 1,
+      number: "..7436",
+      bank: bankIcon,
+    },
+    {
+      id: 2,
+      number: "..7436",
+      bank: bankIcon,
+    },
+    {
+      id: 3,
       number: "..7436",
       bank: bankIcon,
     },

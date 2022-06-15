@@ -9,7 +9,7 @@ export default function CardPay(props) {
     <div className="card">
       <AccordeonCard
         title={<TitleCard icon={bankCard} title="Карты в " logo={logo} />}
-        body={<CardPayBody />}
+        body={<CardPayBody cardPay={props.cardPay} />}
       />
     </div>
   );

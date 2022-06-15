@@ -5,7 +5,7 @@ import styled from "styled-components";
 import arrow from "../../Img/icon/arrow.svg";
 
 export default function AccountAccordeon(props) {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const openedAccordeon = () => {
     setOpen(!open);
   };

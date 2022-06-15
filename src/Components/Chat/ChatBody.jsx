@@ -15,6 +15,7 @@ export default function ChatBody(props) {
     width: 100%;
     overflow-y: scroll;
     padding-bottom: 40px;
+    padding-top: 20px;
     padding-left: 15px;
     padding-right: 15px;
     justify-content: flex-end;

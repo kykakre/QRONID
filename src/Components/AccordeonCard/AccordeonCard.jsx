@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import { CSSTransition } from "react-transition-group";
 
-import styled from "styled-components";
-import arrow from "../../Img/icon/arrow.svg";
-
 export default function AccordeonCard(props) {
   const [open, setOpen] = useState(true);
   const openedAccordeon = () => {
@@ -14,9 +11,8 @@ export default function AccordeonCard(props) {
     <div className={open ? "accordeonCard accordeonOpen" : "accordeonCard"}>
       <div className="cursor" onClick={openedAccordeon}>
         {props.title}
-        <img
+        <div
           className={open ? "dropdownCard dropdownCardOpen" : "dropdownCard"}
-          src={arrow}
           alt=""
         />
       </div>

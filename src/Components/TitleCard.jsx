@@ -21,13 +21,8 @@ export default function TitleCard(props) {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 25px;
   `;
-  const Arrow = styled.img`
-    width: 20px;
-    height: 10px;
-    object-fit: contain;
-  `;
+
   const Logo = styled.img`
     width: 120px;
     height: 30px;

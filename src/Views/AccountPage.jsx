@@ -8,19 +8,17 @@ import styled from "styled-components";
 export default function AccountPage(props) {
   const Flex = styled.div`
     display: flex;
-    justify-content: space-between;
-    width: 75%;
+    justify-content: center;
   `;
   return (
     <Flex>
       <div className="content">
         <AccourdCard card={props.card} person={props.person} />
-        <CardPay />
+        <CardPay cardPay={props.cardPay} />
         <CardMail person={props.person} />
         <CardMail person={props.person} />
         <CardEntry />
       </div>
-      <AccountAccordeon person={props.person} />
     </Flex>
   );
 }

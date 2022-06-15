@@ -6,7 +6,7 @@ import Card from "./Card";
 import bank from "../../Img/icon/bank.svg";
 import security from "../../Img/icon/security.svg";
 import { NavLink } from "react-router-dom";
-export default function CardPayBody() {
+export default function CardPayBody(props) {
   const Flex = styled.div`
     display: flex;
     align-items: center;
@@ -18,30 +18,39 @@ export default function CardPayBody() {
     font-size: 16px;
     color: #333;
     margin-bottom: 25px;
-    span {
+    a {
       color: #cbcbcb;
       font-weight: 600;
+      transition: 0.38s ease-in-out;
+      &:hover {
+        color: #01a2fa;
+      }
     }
   `;
   const CardAdd = styled.div`
     background: linear-gradient(253.3deg, #00e7ff 0%, #01a2fa 100%);
-    border-radius: 12px;
+    background-size: 100%, 100%;
+    border-radius: 18px;
     display: flex;
     align-items: center;
-    width: 25%;
-    padding-top: 25px;
-    padding-left: 25px;
-    padding-bottom: 25px;
-    padding-right: 25px;
+    width: 17%;
+    padding-top: 15px;
+    padding-left: 19px;
+    padding-bottom: 14px;
+    padding-right: 28px;
     margin-right: 20px;
     height: 115px;
+    transition: 0.38s ease-in-out;
+    &:hover {
+      background-size: 150%, 100%;
+    }
   `;
 
   const Icon = styled.img`
     width: 22px;
     height: 22px;
     object-fit: contain;
-    margin-right: 15px;
+    margin-bottom: 12px;
   `;
   const Content = styled.div`
     display: flex;
@@ -69,28 +78,34 @@ export default function CardPayBody() {
     font-size: 14px;
     color: #cbcbcb;
   `;
+  let cardHolder = props.cardPay.map((e) => (
+    <Card id={e.id} number={e.number} key={e.key} bank={e.bank} />
+  ));
   return (
     <div>
       <Subtitle>
         Легко платить в Qron и на всех сайтах, где принимают Qron Pay.
-        <span>Узнать больше</span>
+        <NavLink to="/"> Узнать больше</NavLink>
       </Subtitle>
       <Flex>
         <CardAdd>
-          <Icon src={plus} />
-          <Content>
-            <Title>Добавить карту</Title>
-            <Text>Чтобы платить в один клик</Text>
-          </Content>
+          <NavLink to="/">
+            <Icon src={plus} />
+            <Content>
+              <Title>Добавить карту</Title>
+              <Text>Чтобы платить в один клик</Text>
+            </Content>
+          </NavLink>
         </CardAdd>
-        <Card text="..7436" icon={bank} />
+
+        {cardHolder}
       </Flex>
       <Flex>
         <Security src={security} />
         <SecurityText>Карты надежно храняться в защитном виде</SecurityText>
       </Flex>
-      <NavLink to="#" className="linkBlue">
-        История платежей
+      <NavLink to="#">
+        <div className="linkBlue">История платежей</div>
       </NavLink>
     </div>
   );

@@ -10,7 +10,6 @@ export default function PayPage(props) {
   const Flex = styled.div`
     display: flex;
     justify-content: space-between;
-    width: 75%;
   `;
   return (
     <Flex>
@@ -19,7 +18,6 @@ export default function PayPage(props) {
         <HistoryPay pay={props.pay} check={props.check} />
         <Faq faq={props.faq} />
       </div>
-      <AccountAccordeon person={props.person} />
     </Flex>
   );
 }

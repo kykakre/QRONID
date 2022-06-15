@@ -7,7 +7,7 @@ import LoginAccept from "./Components/Login/LoginAccept";
 import "./Style/Style.scss";
 import Login from "./Components/Login/Login";
 import { useState } from "react";
-import Chat from "./Components/Chat/Chat";
+import AccountAccordeon from "./Components/Account/AccountAccordeon";
 function App(props) {
   const [login, setLogin] = useState(true);
   return (
@@ -46,6 +46,9 @@ function App(props) {
             }
           />
         </Routes>
+        <div className="account">
+          <AccountAccordeon />
+        </div>
       </div>
     </BrowserRouter>
   );
