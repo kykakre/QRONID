@@ -4,9 +4,6 @@ import styled from "styled-components";
 
 export default function AccountBody(props) {
   const Tab = styled.div`
-    position: absolute;
-    left: -100px;
-    bottom: -140px;
     background: #ffffff;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
@@ -15,9 +12,6 @@ export default function AccountBody(props) {
     padding-top: 24px;
     padding-right: 65px;
     z-index: 3;
-    @media (max-width: 992px) {
-      left: -200px;
-    }
   `;
   const Flex = styled.div`
     display: flex;
