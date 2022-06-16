@@ -10,23 +10,21 @@ export default function Account(props) {
     border-radius: 50%;
     margin-right: 10px;
   `;
+
   const Text = styled.div`
     font-size: 12px;
     line-height: 110%;
     margin-right: 5px;
+    @media (max-width: 992px) {
+      display: none;
+    }
   `;
   const Flex = styled.div`
     display: flex;
     align-items: center;
     justify-content: flex-end;
   `;
-  const Arrow = styled.img`
-    width: 10px;
-    height: 5px;
-    object-fit: contain;
-    margin-left: 10px;
-    transform: rotate(180deg);
-  `;
+
   return (
     <div>
       <Flex>

@@ -229,6 +229,11 @@ input {
   display: flex;
   flex-direction: column;
 }
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .accordeon {
   transition: 0.38s ease-in-out;
   display: flex;
@@ -427,6 +432,14 @@ input {
     margin-bottom: 10px;
   }
   .form {
+    width: 100%;
+  }
+  .App {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sidebar {
     width: 100%;
   }
 }

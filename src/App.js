@@ -1,4 +1,5 @@
 import Sidebar from "./Components/Sidebar/Sidebar";
+import { useWindowSize } from "react-use";
 import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
 import AccountPageContainer from "./Views/AccountPageContainer";
 import PayPageContainer from "./Views/PayPageContainer";
@@ -10,48 +11,100 @@ import { useState } from "react";
 import AccountAccordeon from "./Components/Account/AccountAccordeon";
 function App(props) {
   const [login, setLogin] = useState(true);
-  return (
-    <BrowserRouter>
-      <div className="App">
-        <div className="sidebar">
-          <Sidebar />
+  const { width } = useWindowSize();
+  if (width <= 992) {
+    return (
+      <BrowserRouter>
+        <div className="App">
+          <div className="sidebar">
+            <Sidebar />
+          </div>
+          <Routes>
+            <Route path="login/*" element={<Login />} />
+            <Route path="/number" element={<LoginAccept />} />
+            <Route
+              path=""
+              element={
+                login === false ? (
+                  <Navigate to="login" />
+                ) : (
+                  <AccountPageContainer />
+                )
+              }
+            />
+            <Route
+              path="pay"
+              element={
+                login === false ? (
+                  <Navigate to="/login" />
+                ) : (
+                  <PayPageContainer />
+                )
+              }
+            />
+            <Route
+              path="support"
+              element={
+                login === false ? (
+                  <Navigate to="/login" />
+                ) : (
+                  <SupportPageContainer />
+                )
+              }
+            />
+          </Routes>
         </div>
-        <Routes>
-          <Route path="login/*" element={<Login />} />
-          <Route path="/number" element={<LoginAccept />} />
-          <Route
-            path=""
-            element={
-              login === false ? (
-                <Navigate to="login" />
-              ) : (
-                <AccountPageContainer />
-              )
-            }
-          />
-          <Route
-            path="pay"
-            element={
-              login === false ? <Navigate to="/login" /> : <PayPageContainer />
-            }
-          />
-          <Route
-            path="support"
-            element={
-              login === false ? (
-                <Navigate to="/login" />
-              ) : (
-                <SupportPageContainer />
-              )
-            }
-          />
-        </Routes>
-        <div className="account">
-          <AccountAccordeon />
+      </BrowserRouter>
+    );
+  } else {
+    return (
+      <BrowserRouter>
+        <div className="App">
+          <div className="sidebar">
+            <Sidebar />
+          </div>
+
+          <Routes>
+            <Route path="login/*" element={<Login />} />
+            <Route path="/number" element={<LoginAccept />} />
+            <Route
+              path=""
+              element={
+                login === false ? (
+                  <Navigate to="login" />
+                ) : (
+                  <AccountPageContainer />
+                )
+              }
+            />
+            <Route
+              path="pay"
+              element={
+                login === false ? (
+                  <Navigate to="/login" />
+                ) : (
+                  <PayPageContainer />
+                )
+              }
+            />
+            <Route
+              path="support"
+              element={
+                login === false ? (
+                  <Navigate to="/login" />
+                ) : (
+                  <SupportPageContainer />
+                )
+              }
+            />
+          </Routes>
+          <div className="account">
+            <AccountAccordeon />
+          </div>
         </div>
-      </div>
-    </BrowserRouter>
-  );
+      </BrowserRouter>
+    );
+  }
 }
 
 export default App;
