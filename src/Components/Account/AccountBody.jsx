@@ -14,6 +14,7 @@ export default function AccountBody(props) {
     padding-bottom: 23px;
     padding-top: 24px;
     padding-right: 65px;
+    z-index: 3;
     @media (max-width: 992px) {
       left: -200px;
     }
