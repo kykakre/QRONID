@@ -6,6 +6,10 @@ export default function CardMailBody(props) {
   const Flex = styled.div`
     display: flex;
     justify-content: space-between;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+    }
   `;
   const Text = styled.div`
     font-size: 16px;
@@ -16,6 +20,10 @@ export default function CardMailBody(props) {
   `;
   const Item = styled.div`
     width: 33%;
+    @media (max-width: 768px) {
+      margin-bottom: 20px;
+      width: 100%;
+    }
   `;
   return (
     <div>

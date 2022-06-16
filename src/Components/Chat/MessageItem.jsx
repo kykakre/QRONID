@@ -32,6 +32,9 @@ export default function MessageItem(props) {
     font-weight: 400;
     font-size: 14px;
     color: #333;
+    @media (max-width: 576px) {
+      margin-right: 10px;
+    }
   `;
   const MessageTime = styled.div`
     font-size: 14px;

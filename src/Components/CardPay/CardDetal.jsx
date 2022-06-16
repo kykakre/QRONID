@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import more from "../../Img/icon/more.svg";
+import del from "../../Img/icon/del.svg";
 
-export default function Card(props) {
+export default function CardDetal(props) {
   const Card = styled.div`
     display: flex;
     background: radial-gradient(
@@ -11,25 +11,19 @@ export default function Card(props) {
       #e6e6e6 79.34%
     );
     height: 115px;
-    width: 17%;
+    width: 46%;
     border-radius: 18px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-bottom: 14px;
-    padding-left: 19px;
-    padding-right: 19px;
+    padding-bottom: 21px;
+    padding-top: 21px;
+    padding-left: 23px;
+    padding-right: 23px;
     background-size: 100%, 100%;
     transition: 0.38s ease-in-out;
-    margin-right: 15px;
+    margin-bottom: 25px;
     @media (max-width: 1400px) {
-      width: 18%;
-    }
-    @media (max-width: 992px) {
-      width: 30%;
-      margin-bottom: 10px;
-    }
-    @media (max-width: 576px) {
       width: 100%;
     }
     &:hover {
@@ -46,30 +40,32 @@ export default function Card(props) {
     height: 21px;
     object-fit: contain;
   `;
-  const Item = styled.div`
+
+  const Flex = styled.div`
     display: flex;
+    align-items: center;
     justify-content: space-between;
   `;
-  const ItemSecond = styled.div`
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-  `;
-  const More = styled.img`
-    width: 3px;
-    height: 15px;
+  const Logo = styled.img`
+    width: 70px;
+    height: 10px;
     object-fit: contain;
-    margin-top: 15px;
+  `;
+  const Del = styled.img`
+    width: 10px;
+    height: 10px;
+    object-fit: contain;
   `;
   return (
     <Card>
-      <ItemSecond>
-        <More src={more} />
-      </ItemSecond>
-      <Item>
+      <Flex>
+        <Logo src={props.logo} />
+        <Del src={del} />
+      </Flex>
+      <Flex>
         <Text>{props.number}</Text>
         <Icon src={props.bank} />
-      </Item>
+      </Flex>
     </Card>
   );
 }

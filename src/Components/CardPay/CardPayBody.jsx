@@ -1,5 +1,5 @@
 import React from "react";
-
+import close from "../../Img/icon/close.svg";
 import styled from "styled-components";
 import plus from "../../Img/icon/plus.svg";
 import Card from "./Card";
@@ -7,17 +7,23 @@ import bank from "../../Img/icon/bank.svg";
 import security from "../../Img/icon/security.svg";
 import { NavLink } from "react-router-dom";
 import Modal from "react-modal";
+import CardDetal from "./CardDetal";
 export default function CardPayBody(props) {
   const Flex = styled.div`
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 30px;
+    @media (max-width: 576px) {
+      justify-content: center;
+      text-align: center;
+    }
   `;
   const ModalFlex = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
   `;
   const ModalTitle = styled.div`
     font-size: 20px;
@@ -31,11 +37,12 @@ export default function CardPayBody(props) {
     margin-right: 15px;
   `;
   const ModalButton = styled.div`
+    align-items: flex-end;
     padding-left: 20px;
     padding-right: 20px;
+    margin-top: 20px;
     padding-top: 15px;
     padding-bottom: 15px;
-    margin-top: 45px;
     background: #01a2fa;
     border-radius: 8px;
     transition: 0.38s ease-in-out;
@@ -45,6 +52,14 @@ export default function CardPayBody(props) {
       display: flex;
       align-items: center;
     }
+    @media (max-width: 1400px) {
+      width: 100%;
+    }
+  `;
+  const FlexEnd = styled.div`
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
   `;
   const ModalText = styled.div`
     font-size: 14px;
@@ -61,27 +76,6 @@ export default function CardPayBody(props) {
       &:hover {
         color: #01a2fa;
       }
-    }
-  `;
-  const CardAdd = styled.div`
-    background: linear-gradient(253.3deg, #00e7ff 0%, #01a2fa 100%);
-    background-size: 100%, 100%;
-    border-radius: 18px;
-    display: flex;
-    align-items: center;
-    width: 17%;
-    padding-top: 15px;
-    padding-left: 19px;
-    padding-bottom: 14px;
-    padding-right: 28px;
-    margin-right: 20px;
-    height: 115px;
-    transition: 0.38s ease-in-out;
-    &:hover {
-      background-size: 150%, 100%;
-    }
-    @media (max-width: 991px) {
-      width: 30%;
     }
   `;
 
@@ -115,10 +109,18 @@ export default function CardPayBody(props) {
 
     object-fit: contain;
     border-radius: 5px;
+    @media (max-width: 576px) {
+      margin-right: 0;
+    }
   `;
   const SecurityText = styled.div`
     font-size: 14px;
     color: #cbcbcb;
+  `;
+  const Close = styled.img`
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
   `;
   function closeModal() {
     setIsOpen(false);
@@ -129,6 +131,15 @@ export default function CardPayBody(props) {
   let cardHolder = props.cardPay.map((e) => (
     <Card id={e.id} number={e.number} key={e.key} bank={e.bank} />
   ));
+  let cardDetal = props.cardPay.map((e) => (
+    <CardDetal
+      id={e.id}
+      key={e.key}
+      number={e.number}
+      bank={e.bank}
+      logo={e.logo}
+    />
+  ));
   return (
     <div>
       <Subtitle>
@@ -136,14 +147,12 @@ export default function CardPayBody(props) {
         <NavLink to="/"> Узнать больше</NavLink>
       </Subtitle>
       <Flex>
-        <div className="addCard">
-          <CardAdd onClick={() => setIsOpen(true)}>
-            <Icon src={plus} />
-            <Content>
-              <Title>Добавить карту</Title>
-              <Text>Чтобы платить в один клик</Text>
-            </Content>
-          </CardAdd>
+        <div onClick={() => setIsOpen(true)} className="addCard">
+          <Icon src={plus} />
+          <Content>
+            <Title>Добавить карту</Title>
+            <Text>Чтобы платить в один клик</Text>
+          </Content>
         </div>
         {cardHolder}
         <Modal
@@ -154,14 +163,17 @@ export default function CardPayBody(props) {
         >
           <ModalFlex>
             <ModalTitle>Мои карты</ModalTitle>
+            <Close src={close} onClick={closeModal} />
           </ModalFlex>
-          <ModalFlex>{cardHolder}</ModalFlex>
-          <ModalButton>
-            <NavLink to="#">
-              <ModalAdd src={plus} />
-              <ModalText>Добавить новую карту</ModalText>
-            </NavLink>
-          </ModalButton>
+          <ModalFlex>{cardDetal}</ModalFlex>
+          <FlexEnd>
+            <ModalButton>
+              <NavLink to="#">
+                <ModalAdd src={plus} />
+                <ModalText>Добавить новую карту</ModalText>
+              </NavLink>
+            </ModalButton>
+          </FlexEnd>
         </Modal>
       </Flex>
       <Flex>

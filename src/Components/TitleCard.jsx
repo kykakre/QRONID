@@ -12,6 +12,9 @@ export default function TitleCard(props) {
     height: 18px;
     object-fit: contain;
     margin-right: 15px;
+    @media (max-width: 576px) {
+      display: none;
+    }
   `;
   const Title = styled.div`
     font-size: 25px;

@@ -3,6 +3,7 @@ import { CSSTransition } from "react-transition-group";
 import AccountContainer from "./AccountContainer";
 import styled from "styled-components";
 import arrow from "../../Img/icon/arrow.svg";
+import AccountBody from "./AccountBody";
 
 export default function AccountAccordeon(props) {
   const [open, setOpen] = useState(false);

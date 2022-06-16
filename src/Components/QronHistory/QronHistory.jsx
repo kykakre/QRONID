@@ -28,6 +28,11 @@ export default function QronHistory(props) {
     height: 30px;
     margin-bottom: 10px;
     width: 95px;
+    @media (max-width: 768px) {
+      width: 48%;
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
   `;
   const Time = styled.div`
     margin-top: 35px;

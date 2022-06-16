@@ -315,6 +315,7 @@ input {
   @include fluid(width, 300px, 600px);
   position: absolute;
   transform: translate(-50%, -50%);
+  outline: none;
 }
 .dropdownCard {
   transform: rotate(180deg);
@@ -413,5 +414,45 @@ input {
   .account {
     grid-column: 5;
     grid-row: 1;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .addCard {
+    width: 18%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .addCard {
+    width: 30%;
+    margin-bottom: 10px;
+  }
+  .form {
+    width: 100%;
+  }
+}
+@media screen and(max-width:768px) {
+  .content-min {
+    width: 576px;
+  }
+  .list {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 576px) {
+  .addCard {
+    width: 100%;
+  }
+  .content-min {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .App {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .card {
+    width: 100%;
   }
 }

@@ -6,6 +6,10 @@ export default function CardEntryBody(props) {
   const Flex = styled.div`
     display: flex;
     justify-content: space-between;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+    }
   `;
   return (
     <div>

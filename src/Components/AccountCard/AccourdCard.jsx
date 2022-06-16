@@ -30,6 +30,9 @@ export default function AccourdCard(props) {
     flex-direction: column;
     align-items: center;
     padding-left: 20px;
+    @media (max-width: 991px) {
+      padding-left: 0;
+    }
   `;
   const ColumnMin = styled.div`
     width: 38%;

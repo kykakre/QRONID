@@ -9,6 +9,12 @@ export default function Chat(props) {
     min-width: 680px;
     border: 1px solid #cbcbcb;
     border-radius: 20px;
+    @media (max-width: 768px) {
+      min-width: 550px;
+    }
+    @media (max-width: 576px) {
+      min-width: 310px;
+    }
   `;
   return (
     <Container>

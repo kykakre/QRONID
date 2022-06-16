@@ -13,9 +13,9 @@ export default function Service() {
     background: rgba(230, 230, 230, 0.25);
     box-shadow: 0px 0px 15px 5px rgba(203, 203, 203, 0);
     border-radius: 12px;
-    width: 120px;
+    width: 24%;
     height: 120px;
-    margin-right: 25px;
+    margin-right: 1%;
     transition: 0.38s ease-in-out;
     cursor: pointer;
     margin-bottom: 10px;
@@ -25,6 +25,13 @@ export default function Service() {
     }
     &:hover {
       box-shadow: 0px 0px 15px 5px rgba(203, 203, 203, 0.46);
+    }
+    @media (max-width: 768px) {
+      width: 49%;
+    }
+    @media (max-width: 576px) {
+      width: 49%;
+      height: 100px;
     }
   `;
   return (

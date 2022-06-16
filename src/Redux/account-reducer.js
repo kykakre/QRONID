@@ -3,6 +3,7 @@ import heart from "../Img/icon/heart.svg";
 import importIcon from "../Img/icon/import.svg";
 import phone from "../Img/icon/phone.svg";
 import bankIcon from "../Img/icon/bank.svg";
+import sber from "../Img/icon/sber.svg";
 
 let initialState = {
   personInfo: {
@@ -41,15 +42,18 @@ let initialState = {
       id: 1,
       number: "..7436",
       bank: bankIcon,
+      logo: sber,
     },
     {
       id: 2,
       number: "..7436",
+      logo: sber,
       bank: bankIcon,
     },
     {
       id: 3,
       number: "..7436",
+      logo: sber,
       bank: bankIcon,
     },
   ],
