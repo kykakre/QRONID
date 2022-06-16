@@ -8,7 +8,7 @@ import LoginAccept from "./Components/Login/LoginAccept";
 import "./Style/Style.scss";
 import Login from "./Components/Login/Login";
 import { useState } from "react";
-import AccountAccordeon from "./Components/Account/AccountAccordeon";
+import AccountContainer from "./Components/Account/AccountContainer";
 function App(props) {
   const [login, setLogin] = useState(true);
   const { width } = useWindowSize();
@@ -99,7 +99,7 @@ function App(props) {
             />
           </Routes>
           <div className="account">
-            <AccountAccordeon />
+            <AccountContainer />
           </div>
         </div>
       </BrowserRouter>

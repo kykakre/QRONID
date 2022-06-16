@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import Account from "./Account";
+import AccountAccordeon from "./AccountAccordeon";
 
 let mapStateToProps = (state) => {
   return {
@@ -7,5 +7,5 @@ let mapStateToProps = (state) => {
   };
 };
 
-const AccountContainer = connect(mapStateToProps)(Account);
+const AccountContainer = connect(mapStateToProps)(AccountAccordeon);
 export default AccountContainer;

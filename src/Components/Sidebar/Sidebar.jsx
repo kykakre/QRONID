@@ -6,13 +6,14 @@ import account from "../../Img/icon/account.svg";
 import card from "../../Img/icon/card.svg";
 import message from "../../Img/icon/message.svg";
 import { NavLink } from "react-router-dom";
-import AccountAccordeon from "../Account/AccountAccordeon";
+import AccountContainer from "../Account/AccountContainer";
 
 export default function Sidebar(props) {
   const { width } = useWindowSize();
   const Sidebar = styled.div`
     display: flex;
     flex-direction: column;
+    z-index: 0;
     width: 100%;
   `;
   const Logo = styled.img`
@@ -33,7 +34,7 @@ export default function Sidebar(props) {
       &::-webkit-scrollbar {
         width: 0;
       }
-      overflow: auto;
+      overflow: scroll;
     }
   `;
 
@@ -56,7 +57,7 @@ export default function Sidebar(props) {
       <Sidebar>
         <Flex>
           <Logo src={logo} alt="logo" />
-          <AccountAccordeon />
+          <AccountContainer />
         </Flex>
         <Nav>
           <NavLink
