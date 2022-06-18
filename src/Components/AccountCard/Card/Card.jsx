@@ -13,7 +13,7 @@ export default function Card(props) {
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 25%;
+    width: 250px;
     @media (max-width: 991px) {
       display: flex;
       flex-wrap: wrap;

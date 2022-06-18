@@ -90,12 +90,14 @@ export default function AccourdCard(props) {
   const Text = styled.div`
     width: 62%;
     margin-right: 7px;
+    font-size: 15px;
     div {
       font-weight: 600;
     }
   `;
   const TextMin = styled.div`
     width: 36.5%;
+    font-size: 15px;
     div {
       color: #cbcbcb;
       font-weight: 600;

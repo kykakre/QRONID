@@ -23,9 +23,7 @@ export default function CardDetal(props) {
     background-size: 100%, 100%;
     transition: 0.38s ease-in-out;
     margin-bottom: 25px;
-    @media (max-width: 1400px) {
-      width: 100%;
-    }
+
     &:hover {
       background-size: 150%, 100%;
     }
@@ -54,6 +52,7 @@ export default function CardDetal(props) {
     width: 10px;
     height: 10px;
     object-fit: contain;
+    cursor: pointer;
   `;
   return (
     <Card>
