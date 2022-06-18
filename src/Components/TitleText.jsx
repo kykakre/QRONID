@@ -14,13 +14,14 @@ export default function TitleText(props) {
     line-height: 110%;
   `;
   const Item = styled.div`
-    width: 100%;
+    width: 33%;
     line-height: 110%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     @media (max-width: 768px) {
       margin-bottom: 20px;
+      width: 100%;
     }
   `;
   return (

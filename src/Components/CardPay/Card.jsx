@@ -11,7 +11,7 @@ export default function Card(props) {
       #e6e6e6 79.34%
     );
     height: 115px;
-    width: 17%;
+    width: 167px;
     border-radius: 18px;
     display: flex;
     flex-direction: column;
@@ -22,19 +22,13 @@ export default function Card(props) {
     background-size: 100%, 100%;
     transition: 0.38s ease-in-out;
     margin-right: 15px;
-    @media (max-width: 1400px) {
-      width: 18%;
-    }
+
     @media (max-width: 992px) {
-      width: 30%;
       margin-bottom: 10px;
     }
-    @media (max-width: 576px) {
-      width: 100%;
-    }
+
     &:hover {
       background-size: 150%, 100%;
-      transform: rotate3d(0, -1, 0, -15deg);
     }
   `;
   const Text = styled.div`

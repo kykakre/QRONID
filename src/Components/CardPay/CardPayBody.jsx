@@ -15,8 +15,6 @@ export default function CardPayBody(props) {
     flex-wrap: wrap;
     margin-bottom: 30px;
     @media (max-width: 576px) {
-      justify-content: center;
-      text-align: center;
     }
   `;
   const ModalFlex = styled.div`
@@ -110,7 +108,7 @@ export default function CardPayBody(props) {
     object-fit: contain;
     border-radius: 5px;
     @media (max-width: 576px) {
-      margin-right: 0;
+      margin-right: 5px;
     }
   `;
   const SecurityText = styled.div`

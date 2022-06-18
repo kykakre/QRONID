@@ -210,8 +210,8 @@ input {
   border: 1px solid #cbcbcb;
   width: fit-content;
   border-radius: 1000px;
-  @include fluid(padding-left, 15px, 25px);
-  @include fluid(padding-right, 15px, 25px);
+  @include fluid(padding-left, 10px, 15px);
+  @include fluid(padding-right, 10px, 15px);
   @include fluid(padding-top, 5px, 7px);
   @include fluid(padding-bottom, 5px, 7px);
 }
@@ -288,7 +288,7 @@ input {
   background-size: contain;
 }
 .addCard {
-  width: 18%;
+  width: 167px;
   display: block;
   cursor: pointer;
   @include fluid(margin-right, 10px, 15px);
@@ -373,6 +373,9 @@ input {
     }
   }
 }
+.accordion-wrapper__content-body {
+  @include fluid(margin-bottom, 10px, 15px);
+}
 .accordion-wrapper__content-enter {
   overflow: hidden;
   max-height: 0;
@@ -422,13 +425,12 @@ input {
   }
 }
 @media screen and (max-width: 1400px) {
-  .addCard {
-    width: 18%;
-  }
+  // .addCard {
+  //   width: 18%;
+  // }
 }
 @media screen and (max-width: 992px) {
   .addCard {
-    width: 30%;
     margin-bottom: 10px;
   }
   .form {
@@ -448,14 +450,14 @@ input {
     width: 576px;
   }
   .list {
-    width: 100%;
+    width: 50%;
     justify-content: space-between;
   }
 }
 @media screen and (max-width: 576px) {
-  .addCard {
-    width: 100%;
-  }
+  // .addCard {
+  //   width: 100%;
+  // }
   .content-min {
     width: 100%;
     padding-left: 10px;

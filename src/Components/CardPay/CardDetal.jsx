@@ -28,7 +28,6 @@ export default function CardDetal(props) {
     }
     &:hover {
       background-size: 150%, 100%;
-      transform: rotate3d(0, -1, 0, -15deg);
     }
   `;
   const Text = styled.div`
