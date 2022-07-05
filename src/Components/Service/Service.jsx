@@ -8,6 +8,9 @@ export default function Service() {
     align-items: center;
     margin-top: 45px;
     flex-wrap: wrap;
+    @media (max-width: 576px) {
+      margin-top: 20px;
+    }
   `;
   const Item = styled.div`
     background: rgba(230, 230, 230, 0.25);

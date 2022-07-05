@@ -27,6 +27,12 @@ export default function Card(props) {
       margin-bottom: 10px;
     }
 
+    @media (max-width: 576px) {
+      width: 48%;
+      margin-right: 0;
+      height: 120px;
+      margin-right: 2%;
+    }
     &:hover {
       background-size: 150%, 100%;
     }

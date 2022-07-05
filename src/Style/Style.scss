@@ -300,6 +300,7 @@ input {
   padding-left: 19px;
   padding-bottom: 14px;
   padding-right: 19px;
+  margin-right: 15px;
   height: 116px;
   transition: 0.38s ease-in-out;
   &:hover {
@@ -317,7 +318,7 @@ input {
   @include fluid(padding-top, 15px, 30px);
   @include fluid(padding-bottom, 15px, 30px);
   z-index: 100;
-  @include fluid(width, 300px, 600px);
+  width: 600px;
   position: absolute;
   transform: translate(-50%, -50%);
   outline: none;
@@ -449,6 +450,9 @@ input {
   .content-min {
     width: 576px;
   }
+  .modal {
+    width: 300px;
+  }
   .list {
     width: 50%;
     justify-content: space-between;
@@ -458,6 +462,12 @@ input {
   // .addCard {
   //   width: 100%;
   // }
+  .addCard {
+    width: 48%;
+    margin-right: 0;
+    height: 120px;
+    margin-right: 2%;
+  }
   .content-min {
     width: 100%;
     padding-left: 10px;
@@ -469,5 +479,8 @@ input {
   }
   .card {
     width: 100%;
+  }
+  .list {
+    width: 70%;
   }
 }
