@@ -5,6 +5,7 @@ import AccountPageContainer from "./Views/AccountPageContainer";
 import PayPageContainer from "./Views/PayPageContainer";
 import SupportPageContainer from "./Views/SupportPageContainer";
 import LoginAccept from "./Components/Login/LoginAccept";
+import "antd/dist/antd.min.css";
 import "./Style/Style.scss";
 import Login from "./Components/Login/Login";
 import { useState } from "react";

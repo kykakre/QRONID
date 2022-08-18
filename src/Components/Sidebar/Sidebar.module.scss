@@ -1,0 +1,46 @@
+@import "../../style/Mixins.scss";
+
+.sidebar{
+  display: flex;
+  flex-direction: column;
+  z-index: 0;
+  width: 100%;
+}
+.logo{
+  @include fluid(width, 150px, 165px);
+ @include fluid(height, 24px, 26px);
+  object-fit: contain;
+  margin-bottom: 44px;
+
+}
+.flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.itemText{
+  font-weight: 600;
+}
+.itemIcon{
+  width: 15px;
+  height: 15px;
+  object-fit: contain;
+  margin-right: 20px;
+}
+@media screen and (max-width: 992px) {
+  .logo{
+    margin-bottom: 25px;
+  }
+  .nav{
+    display: flex;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 340px) {
+  .nav{
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+    overflow: scroll;
+  }
+}

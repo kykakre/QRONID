@@ -1,53 +1,20 @@
 import React from "react";
-import styled from "styled-components";
+import style from "./Message.module.scss";
 
 export default function Message(props) {
-  const Column = styled.div`
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-  `;
-  const Title = styled.div`
-    font-size: 25px;
-    line-height: 130%;
-    margin-bottom: 25px;
-    width: 60%;
-    text-align: center;
-  `;
-  const Item = styled.div``;
-  const Text = styled.div`
-    font-size: 18px;
-    margin-bottom: 10px;
-  `;
-  const TextArea = styled.textarea`
-    resize: none;
-    border: 1px solid #cbcbcb;
-    border-radius: 20px;
-    font-family: "Commissioner";
-    font-size: 14px;
-    width: 680px;
-    height: 170px;
-    padding-top: 22px;
-    padding-left: 25px;
-    outline: none;
-    margin-bottom: 30px;
-    &::placeholder {
-      color: #cbcbcb;
-    }
-  `;
+
 
   return (
-    <Column>
-      <Title>
+    <div className={style.column}>
+      <div className={style.title}>
         Здесь Вы можете задать вопрос. Специалист службы поддержки свяжется с
         Вами и подскажет решение.
-      </Title>
-      <Item>
-        <Text>Ваше сообщение:</Text>
-        <TextArea placeholder="Напишите сообщение..." wrap="true"></TextArea>
-      </Item>
+      </div>
+      <div>
+        <div className={style.text}>Ваше сообщение:</div>
+        <div className={style.textArea} placeholder="Напишите сообщение..." wrap="true"></div>
+      </div>
       <input className="submit" type="submit"></input>
-    </Column>
+    </div>
   );
 }

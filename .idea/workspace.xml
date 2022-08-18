@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fe0ed20e-c7fc-4766-8f11-71a3838ffd54" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Components/Message/Message.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/QronHistory/QronHistory.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/QronNull/QronNull.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Service/Service.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Sidebar/Sidebar.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Btn.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Message/Message.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Message/Message.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/QronHistory/QronHistory.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/QronHistory/QronHistory.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/QronHistory/QronHistoryItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/QronHistory/QronHistoryItem.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/QronNull/QronNull.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/QronNull/QronNull.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Service/Service.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Service/Service.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Sidebar/Sidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Sidebar/Sidebar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Style/Style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Style/Style.scss" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2DWMzbUgOLGoqV79daPUPsimsqx" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Components/Btn" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fe0ed20e-c7fc-4766-8f11-71a3838ffd54" name="Changes" comment="" />
+      <created>1660810653998</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1660810653998</updated>
+      <workItem from="1660810658435" duration="1867000" />
+      <workItem from="1660814325661" duration="139000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
