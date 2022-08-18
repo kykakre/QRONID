@@ -1,0 +1,90 @@
+@import "../../style/Mixins.scss";
+
+.messageTitle{
+  width: 100%;
+  text-align: center;
+  @include fluid(margin-bottom, 15px, 20px);
+  font-weight: 500;
+  font-size: 12px;
+  color: #a0a0a0;
+}
+.itemFlex{
+  display: flex;
+  align-items: flex-start;
+  @include fluid(padding-bottom, 15px, 20px);
+}
+.itemIcon{
+  @include fluid(width, 20px, 28px);
+  @include fluid(height, 20px, 28px);
+  object-fit: contain;
+  margin-right: 10px;
+}
+.itemAvtor{
+   font-weight: 600;
+   font-size: 11px;
+   color: #a0a0a0;
+   margin-bottom: 5px;
+ }
+.itemMessage{
+     @include fluid(font-size,12px, 14px);
+     display: flex;
+     color: #000;
+     padding: 12px;
+     background: #f1f2f5;
+     border-radius: 0px 20px 20px 20px;
+  }
+.itemMessageText{
+  margin-right: 100px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #333;
+
+}
+.itemMessageTime{
+  @include fluid(font-size,12px, 14px);
+  color: #a0a0a0;
+
+}
+.itemMessageBody{
+  padding-top: 10px;
+}
+.newContainer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ @include fluid(padding-top, 15px, 20px);
+ @include fluid(padding-bottom, 15px, 20px);
+ @include fluid(padding-left, 10px, 15px);
+ @include fluid(padding-right, 10px, 15px);
+  border-top: 1px solid #cbcbcb;
+}
+.newAddItem{
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+  margin-right: 15px;
+}
+.newMessage{
+  border: none;
+  @include fluid(font-size,12px, 14px);
+  font-family: "Commissioner";
+  &::placeholder {
+    color: #cbcbcb;
+  }
+}
+.newFlexEnd{
+  display: flex;
+  align-items: center;
+}
+.newSend{
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 576px) {
+  .itemMessageText{
+    margin-right: 10px;
+
+  }
+}

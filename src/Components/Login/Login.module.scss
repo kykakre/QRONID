@@ -1,0 +1,113 @@
+@import "../../style/Mixins.scss";
+
+.loginLogo{
+  @include fluid(width, 45px, 55px);
+  @include fluid(height, 45px, 55px);
+  object-fit: contain;
+  @include fluid(margin-bottom, 20px, 25px);
+}
+.loginAutorize{
+  min-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.loginTitle{
+  @include fluid(font-size,16px, 18px);
+  letter-spacing: 0.02em;
+  @include fluid(margin-bottom, 45px, 55px);
+}
+.loginForm{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.loginFormTitle{
+  @include fluid(font-size,14px, 16px);
+  color: #787878;
+  @include fluid(margin-bottom, 10px, 15px);
+}
+.loginInput{
+  @include fluid(font-size,18px, 22px);
+  padding-bottom: 10px;
+  border: none;
+  border-bottom: 1px solid #01a2fa;
+  font-family: "Commissioner";
+  font-weight: 500;
+  &::placeholder {
+    color: #cbcbcb;
+  }
+}
+.loginNav{
+  margin-top: 15px;
+  @include fluid(font-size,12px, 14px);
+  font-weight: 500;
+  @include fluid(margin-bottom, 15px, 20px);
+}
+.loginBtn{
+  background: #01a2fa;
+  border-radius: 7px;
+  color: #fff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  @include fluid(padding-left, 55px, 70px);
+  @include fluid(padding-right, 55px, 70px);
+  border: 1px solid #01a2fa;
+  transition: 0.38s ease-in-out;
+  margin-bottom: 10px;
+  cursor: pointer;
+  &:hover {
+    background: #fff;
+    color: #01a2fa;
+  }
+}
+.loginCreate{
+  border: 1px solid #cbcbcb;
+  border-radius: 7px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  display: block;
+  transition: 0.38s ease-in-out;
+  &:hover {
+    background: #000;
+    color: #fff;
+  }
+}
+.loginAutorizeInTo{
+  @include fluid(font-size,14px, 16px);
+  @include fluid(margin-bottom, 15px, 20px);
+  @include fluid(margin-top, 25px, 35px);
+  text-align: center;
+}
+.loginFlex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loginLinkIcon{
+  margin-left: 10px;
+  margin-right: 10px;
+  @include fluid(width, 40px, 50px);
+  @include fluid(height, 40px, 50px);
+  object-fit: contain;
+}
+.loginFooter{
+  @include fluid(margin-bottom, 40px, 50px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.loginFooterTitle{
+  @include fluid(font-size,16px, 18px);
+  font-weight: 500;
+  margin-bottom: 7px;
+  text-align: center;
+  
+}
+.loginFooterText{
+ @include fluid(font-size,14px, 16px);
+  text-align: center;
+}

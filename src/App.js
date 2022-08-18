@@ -60,9 +60,10 @@ function App(props) {
     return (
       <BrowserRouter>
         <div className="App">
-          <div className="sidebar">
-            <Sidebar />
-          </div>
+            {login?<div className="sidebar">
+                <Sidebar />
+            </div>:<></>}
+
 
           <Routes>
             <Route path="login/*" element={<Login />} />
@@ -98,9 +99,10 @@ function App(props) {
               }
             />
           </Routes>
-          <div className="account">
-            <AccountContainer />
-          </div>
+            {login?<div className="account">
+                <AccountContainer />
+            </div>:<></> }
+
         </div>
       </BrowserRouter>
     );
