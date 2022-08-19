@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import {NavLink} from "react-router-dom";
 
 export default function TitleText(props) {
   const Title = styled.div`
@@ -25,9 +26,13 @@ export default function TitleText(props) {
     }
   `;
   return (
-    <Item>
-      <Title>{props.title}</Title>
-      <Text>{props.text}</Text>
+    <Item onClick={props.customOnClick}>
+      {props.href?(<NavLink to={`${props.href}`}>
+        <Title>{props.title}</Title>
+        <Text>{props.text}</Text>
+      </NavLink>):(<><Title>{props.title}</Title>
+        <Text>{props.text}</Text></>)}
+
     </Item>
   );
 }

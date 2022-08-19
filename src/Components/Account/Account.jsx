@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import arrow from "../../Img/icon/arrow.svg";
 
 export default function Account(props) {
   const Avatar = styled.img`

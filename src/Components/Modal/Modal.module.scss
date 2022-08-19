@@ -1,0 +1,162 @@
+@import "../../style/Mixins.scss";
+
+.modalEmail{
+ border-radius: 20px;
+ @include fluid(width, 560px, 690px);
+background: #fff;
+ @include fluid(padding-left, 30px, 60px);
+ @include fluid(padding-right, 30px, 60px);
+ @include fluid(padding-top, 15px, 30px);
+ @include fluid(padding-bottom, 15px, 30px);
+}
+.emailTitle{
+ @include fluid(font-size,18px, 20px);
+ @include fluid(margin-bottom, 15px, 30px);
+ font-weight: 600;
+}
+.emailSubtitle{
+ @include fluid(font-size,12px, 14px);
+ @include fluid(margin-bottom, 10px, 20px);
+}
+.emailText{
+ @include fluid(font-size,12px, 14px);
+ @include fluid(margin-bottom, 4px, 8px);
+}
+.emailInput{
+ width: 100%;
+ border: 1px solid #CBCBCB;
+ border-radius: 5px;
+ @include fluid(font-size,16px, 18px);
+ @include fluid(padding-left, 10px, 15px);
+ @include fluid(padding-right, 10px, 15px);
+ @include fluid(padding-top, 5px, 7px);
+ @include fluid(padding-bottom, 5px, 7px);
+ @include fluid(margin-bottom, 15px, 30px);
+}
+.flex{
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+}
+.back{
+ @include fluid(padding-left, 15px, 30px);
+ @include fluid(padding-right, 15px, 30px);
+ @include fluid(padding-top, 10px, 15px);
+ @include fluid(padding-bottom, 10px, 15px);
+ border: 1px solid #CBCBCB;
+ border-radius: 8px;
+ color: #333;
+ transition: .38s ease-in-out;
+ cursor: pointer;
+ &:hover{
+  background: #333;
+  color: #fff;
+ }
+
+}
+.next{
+ @include fluid(padding-left, 15px, 30px);
+ @include fluid(padding-right, 15px, 30px);
+ @include fluid(padding-top, 10px, 15px);
+ @include fluid(padding-bottom, 10px, 15px);
+ border: 1px solid #01A2FA;
+ background: #01A2FA;
+ border-radius: 8px;
+ color: #fff;
+ transition: .38s ease-in-out;
+ cursor: pointer;
+ &:hover{
+  background: #fff;
+  color: #01a2fa;
+ }
+}
+
+.modalTg{
+ background: #fff;
+ display: flex;
+ flex-direction: column;
+ border-radius: 20px;
+ align-items: center;
+ justify-content: center;
+ @include fluid(padding-left, 20px, 40px);
+ @include fluid(padding-right, 20px, 40px);
+ @include fluid(padding-top, 30px, 45px);
+ @include fluid(padding-bottom, 30px, 45px);
+ @include fluid(width, 300px, 380px);
+}
+.tgLogo{
+ @include fluid(width, 60px, 80px);
+ @include fluid(height, 60px, 80px);
+ object-fit: contain;
+ @include fluid(margin-bottom, 25px, 40px);
+}
+.tgTitle{
+ text-align: center;
+ @include fluid(font-size,20px, 22px);
+ font-weight: 600;
+ @include fluid(margin-bottom, 15px, 25px);
+}
+.tgSubtitle{
+ text-align: center;
+ @include fluid(font-size,12px, 14px);
+ @include fluid(margin-bottom, 35px, 45px);
+}
+.tgInput{
+ @include fluid(font-size,20px, 24px);
+ font-weight: 500;
+ color: #333;
+ @include fluid(margin-bottom, 15px, 20px);
+ border: none;
+ border-bottom:1px solid #01a2fa;
+ padding-bottom: 10px;
+ &::placeholder{
+  color: #CBCBCB;
+ }
+}
+.shared{
+ display: flex;
+ align-items: center;
+}
+.sharedIcon{
+ @include fluid(width, 10px, 14px);
+ @include fluid(height, 10px, 14px);
+ object-fit: contain;
+ @include fluid(margin-right, 10px, 15px);
+ 
+}
+.sharedText{
+ color: #787878;
+ @include fluid(font-size,13px, 15px);
+}
+.tgBtn{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ background: #F2F2F2;
+ border-radius: 7px;
+ @include fluid(padding-top, 8px, 12px);
+ @include fluid(padding-bottom, 8px, 12px);
+ @include fluid(margin-bottom, 15px, 30px);
+ width: 100%;
+ border: 1px solid#F2F2F2;
+ transition: .38s ease-in-out;
+ &:hover{
+  border: 1px solid #333;
+  .tgBtnText{
+   color: #333333;
+
+  }
+  background: #fff;
+ }
+}
+.tgBtnIcon{
+ @include fluid(width, 14px, 18px);
+ @include fluid(height, 14px, 18px);
+ object-fit: contain;
+ margin-right: 5px;
+}
+.tgBtnText{
+ @include fluid(font-size,12px, 14px);
+ color:#787878;
+ transition: .38s ease-in-out;
+}

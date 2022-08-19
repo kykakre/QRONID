@@ -1,0 +1,61 @@
+@import "../../style/Mixins.scss";
+
+.title{
+  @include fluid(font-size,23px, 25px);
+  font-weight: 700;
+  @include fluid(margin-bottom, 10px, 8px);
+  line-height: 110%;
+  color: #333;
+}
+.description{
+  @include fluid(font-size,14px, 16px);
+  color: #333;
+  letter-spacing: 0.02em;
+  line-height: 119%;
+  @include fluid(margin-bottom, 20px, 25px);
+  a{
+    color: #C6C6C6;
+    transition: .38s ease-in-out;
+    &:hover{
+      color: #01a2fa;
+    }
+  }
+}
+.phoneCard{
+  @include fluid(padding-top, 15px, 18px);
+  @include fluid(padding-bottom, 15px, 18px);
+  @include fluid(padding-left, 15px, 18px);
+  @include fluid(padding-right, 30px, 40px);
+  background: #F3F3F3;
+  border-radius: 16px;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  @include fluid(margin-bottom, 40px, 60px);
+}
+.flex{
+  display: flex;
+  align-items: flex-start;
+
+}
+.security{
+  @include fluid(width, 15px, 20px);
+  @include fluid(height, 15px, 20px);
+  object-fit: contain;
+  @include fluid(margin-right, 10px, 15px);
+}
+.number{
+  @include fluid(font-size,16px, 18px);
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.status{
+  @include fluid(font-size,12px, 14px);
+  color: #A39F9F;
+}
+.more{
+  @include fluid(width, 3px, 4px);
+  @include fluid(height, 17px, 20px);
+  object-fit: contain;
+  cursor: pointer;
+}

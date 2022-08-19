@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
+import ModalContainer from "../../Modal/ModalContainer";
 
 export default function CardItem(props) {
   const FlexStart = styled.div`
@@ -31,7 +32,7 @@ export default function CardItem(props) {
     color: #fff;
   `;
   return (
-    <NavLink to={props.href} className="Link">
+    <NavLink to={props.href} onClick={props.customOnClick} className="Link">
       <FlexStart>
         <Icon src={props.icon} />
         <Column>
@@ -39,6 +40,7 @@ export default function CardItem(props) {
           <Link>{props.link}</Link>
         </Column>
       </FlexStart>
+
     </NavLink>
   );
 }

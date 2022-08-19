@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fe0ed20e-c7fc-4766-8f11-71a3838ffd54" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Components/Modal/InviteModal.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Modal/Modal.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Modal/ModalContainer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Modal/ModalEmail.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/PhoneCard/PhoneCard.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/PhoneCard/PhoneCard.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/PhoneCard/PhoneSetting/PhoneSetting.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/PhoneCard/PhoneSetting/PhoneSetting.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/PhoneCard/PhoneSetting/PhoneSettingItem.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Views/PhonePage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Views/PhonePageContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Accordeon/Accordeon.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Accordeon/Accordeon.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Account/Account.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Account/Account.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Account/AccountAccordeon.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Account/AccountAccordeon.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/AccountCard/Card/Card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/AccountCard/Card/Card.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/AccountCard/Card/CardItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/AccountCard/Card/CardItem.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/CardMail.jsx/CardMailBody.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/CardMail.jsx/CardMailBody.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/TitleText.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/TitleText.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/account-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/account-reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Style/Style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Style/Style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Views/PayPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/PayPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Views/SupportPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/SupportPage.jsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2DWMzbUgOLGoqV79daPUPsimsqx" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Components/Btn" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fe0ed20e-c7fc-4766-8f11-71a3838ffd54" name="Changes" comment="" />
+      <created>1660810653998</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1660810653998</updated>
+      <workItem from="1660810658435" duration="1867000" />
+      <workItem from="1660814325661" duration="139000" />
+      <workItem from="1660815903953" duration="10059000" />
+      <workItem from="1660887639036" duration="12325000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

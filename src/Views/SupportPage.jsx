@@ -1,8 +1,5 @@
 import React from "react";
-import Account from "../Components/Account/Account";
 import styled from "styled-components";
-import Message from "../Components/Message/Message";
-import AccountAccordeon from "../Components/Account/AccountAccordeon";
 import Chat from "../Components/Chat/Chat";
 
 export default function SupportPage(props) {

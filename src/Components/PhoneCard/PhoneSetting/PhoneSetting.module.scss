@@ -1,0 +1,43 @@
+@import "../../../style/Mixins.scss";
+
+.title{
+  @include fluid(font-size,16px, 18px);
+  color: #333;
+  font-weight: 700;
+  @include fluid(margin-bottom, 10px, 15px);
+}
+.subtitle{
+  @include fluid(font-size,14px, 16px);
+  color:#333;
+  @include fluid(margin-bottom, 30px, 40px);
+}
+.item{
+  @include fluid(padding-bottom, 15px, 30px);
+  border-bottom: 1px solid #CBCBCB;
+  @include fluid(margin-top, 15px, 30px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &:last-child{
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+}
+.itemContainer{
+  display: flex;
+  align-items: center;
+}
+.itemIcon{
+  @include fluid(width, 30px, 35px);
+  @include fluid(height, 30px, 35px);
+  object-fit: contain;
+  @include fluid(margin-right, 15px, 20px);
+}
+.itemTitle{
+  @include fluid(font-size,14px, 16px);
+  margin-bottom: 3px;
+}
+.itemText{
+  @include fluid(font-size,14px, 16px);
+  color: #A39F9F;
+}

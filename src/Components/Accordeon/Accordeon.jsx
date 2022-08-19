@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { CSSTransition } from "react-transition-group";
-import styled from "styled-components";
-import arrow from "../../Img/icon/arrow.svg";
 
 export default function Accordeon(props) {
   const [open, setOpen] = useState(false);

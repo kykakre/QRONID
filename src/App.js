@@ -9,6 +9,7 @@ import "./Style/Style.scss";
 import Login from "./Components/Login/Login";
 import { useState } from "react";
 import AccountContainer from "./Components/Account/AccountContainer";
+import PhonePageContainer from "./Views/PhonePageContainer";
 function App(props) {
   const [login, setLogin] = useState(true);
   const { width } = useWindowSize();
@@ -32,6 +33,16 @@ function App(props) {
                 )
               }
             />
+              <Route
+                  path="phone"
+                  element={
+                      login === false ? (
+                          <Navigate to="login" />
+                      ) : (
+                          <PhonePageContainer />
+                      )
+                  }
+              />
             <Route
               path="pay"
               element={
@@ -77,6 +88,16 @@ function App(props) {
                 )
               }
             />
+              <Route
+                  path="phone"
+                  element={
+                      login === false ? (
+                          <Navigate to="login" />
+                      ) : (
+                          <PhonePageContainer />
+                      )
+                  }
+              />
             <Route
               path="pay"
               element={

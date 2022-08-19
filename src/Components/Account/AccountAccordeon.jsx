@@ -1,11 +1,8 @@
 import React, { useState } from "react";
-import { CSSTransition } from "react-transition-group";
-import AccountContainer from "./AccountContainer";
-import styled from "styled-components";
 import arrow from "../../Img/icon/arrow.svg";
 import AccountBody from "./AccountBody";
 import Account from "./Account";
-import { Button, Dropdown } from "antd";
+import {  Dropdown } from "antd";
 import "antd/dist/antd.css";
 
 export default function AccountAccordeon(props) {
