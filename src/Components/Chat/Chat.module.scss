@@ -1,0 +1,89 @@
+@import "../../style/Mixins.scss";
+
+.chatContainer{
+  min-width: 680px;
+  border: 1px solid #cbcbcb;
+  border-radius: 20px;
+
+}
+.chatBody{
+  height: 420px;
+  width: 100%;
+  overflow-y: scroll;
+  @include fluid(padding-bottom, 30px, 40px);
+  @include fluid(padding-top, 15px, 20px);
+  @include fluid(padding-left, 10px, 15px);
+  @include fluid(padding-right, 10px, 15px);
+  justify-content: flex-end;
+
+  &::-webkit-scrollbar {
+    background: transparent;
+  }
+}
+.chatFlex{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.titleSpaceBetween{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  border-bottom: 1px solid #cbcbcb;
+  padding-right: 15px;
+}
+.titleFlex{
+  display: flex;
+  align-items: center;
+}
+.title{
+  @include fluid(font-size,11px, 13px);
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.titleText{
+  font-size: 10px;
+  color: #a0a0a0;
+  font-weight: 300;
+}
+.titleImg{
+  @include fluid(width, 30px, 33px);
+  @include fluid(height, 30px, 33px);
+  border-radius: 50%;
+  object-fit: contain;
+}
+.titleIcon{
+  position: relative;
+  margin-right: 10px;
+
+}
+.titleOnline{
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+.titleSetting{
+  width: 5px;
+  height: 25px;
+  object-fit: contain;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .chatContainer{
+    min-width: 550px;
+
+  }
+}
+@media screen and (max-width: 576px) {
+  .chatContainer{
+    min-width: 310px;
+
+  }
+}

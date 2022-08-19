@@ -1,19 +1,12 @@
 import React from "react";
 import TitleText from "../TitleText";
-import styled from "styled-components";
+import style from "./CardEntry.module.scss";
 
 export default function CardEntryBody(props) {
-  const Flex = styled.div`
-    display: flex;
-    justify-content: space-between;
-    @media (max-width: 768px) {
-      flex-direction: column;
-      align-items: center;
-    }
-  `;
+
   return (
     <div>
-      <Flex>
+      <div className={style.cardEntryFlex}>
         <TitleText
           title="История входов"
           text="Последний вход: 20 февраля, 12:36,AndroidBrowser"
@@ -26,7 +19,7 @@ export default function CardEntryBody(props) {
           title="Выйти на всех устройствах"
           text="Если есть сомнения или подозрения"
         ></TitleText>
-      </Flex>
+      </div>
     </div>
   );
 }

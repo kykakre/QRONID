@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import style from "./Message.module.scss";
 import MessageItem from "./MessageItem";
 export default function Message(props) {
   let message = props.bodyMessage.map((e) => (
@@ -13,19 +13,11 @@ export default function Message(props) {
     />
   ));
 
-  const Title = styled.div`
-    width: 100%;
-    text-align: center;
-    margin-bottom: 20px;
-    font-weight: 500;
-    font-size: 12px;
-    color: #a0a0a0;
-  `;
-  const Body = styled.div``;
+
   return (
     <div>
-      <Title>{props.timeMessage}</Title>
-      <Body>{message}</Body>
+      <div className={style.messageTitle}>{props.timeMessage}</div>
+      <div>{message}</div>
     </div>
   );
 }

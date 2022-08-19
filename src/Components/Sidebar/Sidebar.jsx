@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import style from "./Sidebar.module.scss";
 import { useWindowSize } from "react-use";
 import logo from "../../Img/logo.svg";
 import account from "../../Img/icon/account.svg";
@@ -10,64 +10,23 @@ import AccountContainer from "../Account/AccountContainer";
 
 export default function Sidebar(props) {
   const { width } = useWindowSize();
-  const Sidebar = styled.div`
-    display: flex;
-    flex-direction: column;
-    z-index: 0;
-    width: 100%;
-  `;
-  const Logo = styled.img`
-    width: 165px;
-    height: 26px;
-    object-fit: contain;
-    margin-bottom: 44px;
-    @media (max-width: 992px) {
-      margin-bottom: 25px;
-    }
-  `;
-  const Nav = styled.div`
-    @media (max-width: 992px) {
-      display: flex;
-      align-items: center;
-    }
-    @media (max-width: 340px) {
-      &::-webkit-scrollbar {
-        width: 0;
-      }
-      overflow: scroll;
-    }
-  `;
 
-  const ItemIcon = styled.img`
-    width: 15px;
-    height: 15px;
-    object-fit: contain;
-    margin-right: 20px;
-  `;
-  const ItemText = styled.div`
-    font-weight: 600;
-  `;
-  const Flex = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  `;
   if (width <= 992) {
     return (
-      <Sidebar>
-        <Flex>
-          <Logo src={logo} alt="logo" />
+      <div className={style.sidebar}>
+        <div className={style.flex}>
+          <img className={style.logo} src={logo} alt="logo" />
           <AccountContainer />
-        </Flex>
-        <Nav>
+        </div>
+        <div className={style.nav}>
           <NavLink
             className={({ isActive }) =>
               isActive ? `NavItem NavItemActive` : `NavItem `
             }
             to=""
           >
-            <ItemIcon src={account} />
-            <ItemText>Аккаунт</ItemText>
+            <img className={style.itemIcon} src={account} />
+            <div className={style.itemText}>Аккаунт</div>
           </NavLink>
           <NavLink
             className={({ isActive }) =>
@@ -75,8 +34,8 @@ export default function Sidebar(props) {
             }
             to="/pay"
           >
-            <ItemIcon src={card} />
-            <ItemText>Платежи</ItemText>
+            <img className={style.itemIcon} src={card} />
+            <div className={style.itemText}>Платежи</div>
           </NavLink>
           <NavLink
             className={({ isActive }) =>
@@ -84,25 +43,25 @@ export default function Sidebar(props) {
             }
             to="/support"
           >
-            <ItemIcon src={message} />
-            <ItemText>Центр поддержки</ItemText>
+            <div className={style.itemIcon} src={message} />
+            <div className={style.itemText}>Центр поддержки</div>
           </NavLink>
-        </Nav>
-      </Sidebar>
+        </div>
+      </div>
     );
   } else {
     return (
       <Sidebar>
-        <Logo src={logo} alt="logo" />
-        <Nav>
+        <img className={style.logo} src={logo} alt="logo" />
+        <div className={style.nav}>
           <NavLink
             className={({ isActive }) =>
               isActive ? `NavItem NavItemActive` : `NavItem `
             }
             to=""
           >
-            <ItemIcon src={account} />
-            <ItemText>Аккаунт</ItemText>
+            <div className={style.itemIcon} src={account} />
+            <div className={style.itemText}>Аккаунт</div>
           </NavLink>
           <NavLink
             className={({ isActive }) =>
@@ -110,8 +69,8 @@ export default function Sidebar(props) {
             }
             to="/pay"
           >
-            <ItemIcon src={card} />
-            <ItemText>Платежи</ItemText>
+            <div className={style.itemIcon} src={card} />
+            <div className={style.itemText}>Платежи</div>
           </NavLink>
           <NavLink
             className={({ isActive }) =>
@@ -119,10 +78,10 @@ export default function Sidebar(props) {
             }
             to="/support"
           >
-            <ItemIcon src={message} />
-            <ItemText>Центр поддержки</ItemText>
+            <div className={style.itemIcon} src={message} />
+            <div className={style.itemText}>Центр поддержки</div>
           </NavLink>
-        </Nav>
+        </div>
       </Sidebar>
     );
   }

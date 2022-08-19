@@ -1,7 +1,7 @@
 import React from "react";
-import AccourdCard from "../Components/AccountCard/AccourdCard";
+import AccountCard from "../Components/AccountCard/AccountCard";
 import CardPay from "../Components/CardPay/CardPay";
-import CardMail from "../Components/CardMail.jsx/CardMail";
+import CardMail from "../Components/CardMail/CardMail";
 import CardEntry from "../Components/CardEntry/CardEntry";
 import AccountAccordeon from "../Components/Account/AccountAccordeon";
 import styled from "styled-components";
@@ -17,7 +17,7 @@ export default function AccountPage(props) {
   return (
     <Flex>
       <div className="content">
-        <AccourdCard card={props.card} person={props.person} />
+        <AccountCard card={props.card} person={props.person} />
         <CardPay cardPay={props.cardPay} />
         <CardMail person={props.person} />
         <CardMail person={props.person} />

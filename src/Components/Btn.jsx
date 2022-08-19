@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 export default function Btn(props) {
-  const Link = styled.div`
+    const Link = styled.div`
     background: #01a2fa;
     border-radius: 7px;
     color: #fff;
@@ -18,9 +18,9 @@ export default function Btn(props) {
       color: #01a2fa;
     }
   `;
-  return (
-    <NavLink to="#">
-      <Link>{props.text}</Link>
-    </NavLink>
-  );
+    return (
+        <NavLink to="#">
+            <Link>{props.text}</Link>
+        </NavLink>
+    );
 }

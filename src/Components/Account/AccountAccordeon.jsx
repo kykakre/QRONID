@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import arrow from "../../Img/icon/arrow.svg";
 import AccountBody from "./AccountBody";
 import Account from "./Account";
-import {  Dropdown } from "antd";
+import { Dropdown } from "antd";
 import "antd/dist/antd.css";
 
 export default function AccountAccordeon(props) {

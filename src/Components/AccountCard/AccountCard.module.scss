@@ -1,0 +1,143 @@
+@import "../../style/Mixins.scss";
+
+.accountCardFlex{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.accountCardFlexStart{
+  display: flex;
+  align-items: baseline;
+  @include fluid(padding-bottom, 20px, 30px);
+  border-bottom: 1px solid #cbcbcb;
+  width: 100%;
+}
+.accountCardFlexCenter{
+  display: flex;
+  align-items: center;
+  width: 100%;
+ @include fluid(padding-top, 20px, 25px);
+}
+.accountCardColumn{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 20px;
+
+}
+.accountCardColumnMin{
+  width: 38%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.accountCardAvatar{
+  @include fluid(width, 100px, 115px);
+  @include fluid(height, 100px, 115px);
+  object-fit: contain;
+}
+.accountCardLink{
+  font-size: 11px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  line-height: 110%;
+  position: relative;
+  color: #01a2fa;
+  &::before {
+    content: "";
+    transition: 0.38s ease-in-out;
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    background: #01a2fa;
+    width: 0;
+    height: 1.5px;
+    opacity: 0;
+    border-radius: 1px;
+  }
+  &:hover {
+    &::before {
+      left: 0;
+      opacity: 1;
+      width: 100%;
+    }
+  }
+}
+.accountCardName{
+  @include fluid(font-size,26px, 30px);
+  font-weight: 500;
+  line-height: 110%;
+}
+.accountCardMail{
+  @include fluid(margin-top, 10px, 15px);
+  @include fluid(font-size,14px, 16px);
+}
+.accountCardText{
+  width: 62%;
+  margin-right: 7px;
+  @include fluid(font-size,13px, 15px);
+  div {
+    font-weight: 600;
+  }
+}
+.accountCardTextMin{
+  width: 36.5%;
+  @include fluid(font-size,13px, 15px);
+  div {
+    color: #cbcbcb;
+    font-weight: 600;
+  }
+}
+.cardColumn{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  @include fluid(width, 230px, 250px);
+ 
+}
+.cardItemFlexStart{
+  display: flex;
+  align-items: flex-start;
+}
+.cardItemIcon{
+  @include fluid(width, 15px, 20px);
+  @include fluid(height, 15px, 20px);
+  object-fit: contain;
+  @include fluid(margin-right, 15px, 18px);
+}
+.cardItemColumn{
+  display: flex;
+  flex-direction: column;
+}
+.cardItemText{
+  font-weight: 400;
+  @include fluid(font-size,12px, 14px);
+  line-height: 125%;
+  color: #fff;
+  margin-bottom: 5px;
+  line-height: 125%;
+}
+.cardItemLink{
+  font-weight: 600;
+  font-size: 16px;
+  color: #fff;
+}
+@media screen and(max-width: 991px) {
+  .accountCardFlex{
+    flex-direction: column;
+  }
+  .accountCardColumn{
+    padding-left: 0;
+  }
+  .accountCardColumnMin{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 100%;
+  }
+  .cardColumn{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+}

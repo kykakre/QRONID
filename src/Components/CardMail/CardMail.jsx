@@ -1,7 +1,6 @@
 import React from "react";
 import TitleCard from "../TitleCard";
 import mail from "../../Img/icon/mail.svg";
-
 import AccordeonCard from "../AccordeonCard/AccordeonCard";
 import CardMailBody from "./CardMailBody";
 

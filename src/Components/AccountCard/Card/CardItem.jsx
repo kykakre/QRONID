@@ -1,37 +1,12 @@
 import React from "react";
-import styled from "styled-components";
+import style from "../AccountCard.module.scss";
 import { NavLink } from "react-router-dom";
 import ModalContainer from "../../Modal/ModalContainer";
 
 export default function CardItem(props) {
-  const FlexStart = styled.div`
-    display: flex;
-    align-items: flex-start;
-  `;
-  const Icon = styled.img`
-    width: 20px;
-    height: 20px;
-    object-fit: contain;
-    margin-right: 18px;
-  `;
-  const Column = styled.div`
-    display: flex;
-    flex-direction: column;
-  `;
-  const Text = styled.div`
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 125%;
-    color: #fff;
-    margin-bottom: 5px;
-    line-height: 125%;
-  `;
-  const Link = styled.div`
-    font-weight: 600;
-    font-size: 16px;
-    color: #fff;
-  `;
+
   return (
+<<<<<<< HEAD
     <NavLink to={props.href} onClick={props.customOnClick} className="Link">
       <FlexStart>
         <Icon src={props.icon} />
@@ -41,6 +16,16 @@ export default function CardItem(props) {
         </Column>
       </FlexStart>
 
+=======
+    <NavLink to={props.href} className="Link">
+      <div className={style.cardItemFlexStart}>
+        <img className={style.cardItemIcon} src={props.icon} />
+        <div className={style.cardItemColumn}>
+          <div className={style.cardItemText}>{props.text}</div>
+          <div className={style.cardItemLink}>{props.link}</div>
+        </div>
+      </div>
+>>>>>>> 145a94cf22453ce35612de59dd472b8c920d3e0a
     </NavLink>
   );
 }

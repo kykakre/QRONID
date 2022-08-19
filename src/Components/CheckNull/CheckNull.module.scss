@@ -1,0 +1,23 @@
+@import "../../style/Mixins.scss";
+
+.block{
+  @include fluid(padding-top, 60px, 80px);
+  @include fluid(padding-bottom, 30px, 40px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  text-align: center;
+}
+.title{
+  @include fluid(font-size,23px, 25px);
+  font-weight: 500;
+  margin-bottom: 7px;
+}
+.text{
+  @include fluid(font-size,14px, 16px);
+  line-height: 130%;
+  width: 70%;
+  padding-bottom: 40px;
+}
